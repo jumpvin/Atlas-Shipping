@@ -7,12 +7,12 @@
 - Repository state: `operational`
 - Current product build: `0.1.5`
 - Current product schema: `0.1.2`
-- Current milestone: `ATLAS-INIT-001`
-- Current milestone status: `implemented`
-- Next owner: `Architecture`
-- Next command: `Review`
+- Current milestone: `ATLAS-M001`
+- Current milestone status: `active`
+- Next owner: `Builder`
+- Next command: `Implement Milestone`
 
-The repository has completed Framework bootstrap implementation. Operational validation authority is now materialized; Architecture owns review and acceptance of `ATLAS-INIT-001`.
+The repository bootstrap milestone `ATLAS-INIT-001` has passed Architecture review. The active product-development milestone is `ATLAS-M001 — Shipping Data Foundation`.
 
 ## Role
 
@@ -22,7 +22,7 @@ Implement only the canonical current repository milestone. Architecture owns req
 
 Consumer-repository authority order is: current milestone; Framework and adopted extension locks; product profiles/inventory/roadmap; these instructions; then source/tests. Stop on conflicts.
 
-The active Framework authority is Modular Development Framework `0.3.9-dev.18.9`. The adopted WordPress platform authority is WordPress Plugin Suite Profile `0.2.0`; its repository lock is an output of the initialization milestone and is therefore not required in advance during bootstrap.
+The active Framework authority is Modular Development Framework `0.3.9-dev.18.9`. The adopted WordPress platform authority is WordPress Plugin Suite Profile `0.2.0` at `docs/extensions/wordpress-plugin-suite-profile.lock`.
 
 ## Mandatory synchronization and identity proof
 
@@ -41,7 +41,7 @@ Before planning, prove current milestone ID/status, build, release target, branc
 
 ## Repository states
 
-Detect `empty`, `bootstrap`, or `operational`. Bootstrap requires only root instructions, a lock, authorized branch, and initialization milestone; never require that milestone's own outputs in advance. Operational repositories require the full operations manifest and validation surface.
+Detect `empty`, `bootstrap`, or `operational`. This repository is operational and requires the full operations manifest and validation surface.
 
 ## Commands
 
@@ -59,7 +59,7 @@ Detect `empty`, `bootstrap`, or `operational`. Bootstrap requires only root inst
 
 Use the authorized release/milestone/hotfix branch. Do not create, switch, merge, rebase, force-push, delete, stash, or discard work without explicit authority. Commit/push only when the command and milestone authorize them. Preserve unrelated changes and report every omission or failure.
 
-For `ATLAS-INIT-001`, the milestone explicitly authorizes commits and pushes to `bootstrap/atlas-initialization` only. It does not authorize merging to `master`.
+For `ATLAS-M001`, the milestone explicitly authorizes commits and pushes to `bootstrap/atlas-initialization` only. It does not authorize merging to `master`.
 
 ## Completion
 
