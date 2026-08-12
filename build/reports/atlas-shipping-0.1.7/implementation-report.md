@@ -28,3 +28,4 @@ Builder does not claim Architecture acceptance.
 - R2 supplies all normal editor copy, labels, controls, confirmations, success text, and accessible move labels through the PHP `atlas-shipping` translation configuration.
 - R3 requires the expected aggregate `row_version` for every stop/item create, update, remove, and reorder mutation, touches the request row on success, returns stable conflicts, and carries the returned version forward in the editor.
 - Scoped WordPress validation passed for blank-shell rejection plus stop-first and item-first atomic creation. Live two-tab validation passed for successful child autosave and stale aggregate conflict.
+- R3A moves expected-version claim, child validation/persistence, and parent version/timestamp advancement into one service transaction. Invalid and stale child operations leave both parent and child state unchanged; valid stop/item operations advance the parent exactly once.
