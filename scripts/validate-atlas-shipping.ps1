@@ -8,13 +8,13 @@ $entry = Join-Path $RepositoryRoot 'atlas-shipping/atlas-shipping.php'
 if (-not (Test-Path $entry)) { $failures.Add('plugin-entry-missing') }
 else {
   $text = Get-Content -Raw $entry
-  if ($text -notmatch '(?m)^ \* Version: 0\.1\.5\s*$') { $failures.Add('plugin-header-version-mismatch') }
-  if ($text -notmatch "ATLAS_SHIPPING_VERSION', '0\.1\.5'") { $failures.Add('plugin-version-constant-mismatch') }
-  if ($text -notmatch "ATLAS_SHIPPING_SCHEMA_VERSION', '0\.1\.2'") { $failures.Add('schema-version-mismatch') }
+  if ($text -notmatch '(?m)^ \* Version: 0\.1\.6\s*$') { $failures.Add('plugin-header-version-mismatch') }
+  if ($text -notmatch "ATLAS_SHIPPING_VERSION', '0\.1\.6'") { $failures.Add('plugin-version-constant-mismatch') }
+  if ($text -notmatch "ATLAS_SHIPPING_SCHEMA_VERSION', '0\.1\.3'") { $failures.Add('schema-version-mismatch') }
 }
 $required = @('AGENTS.md','framework.json','framework.lock','workflow-state.json','repository.operations.json','docs/extensions/wordpress-plugin-suite-profile.lock','docs/current-state-inventory.md')
 foreach ($path in $required) { if (-not (Test-Path (Join-Path $RepositoryRoot $path))) { $failures.Add("required-path-missing:$path") } }
-$zipPath = Join-Path $RepositoryRoot 'build/dev/atlas-shipping-0.1.5.zip'
+$zipPath = Join-Path $RepositoryRoot 'build/dev/atlas-shipping-0.1.6.zip'
 if (-not (Test-Path $zipPath)) { $failures.Add('development-package-missing') }
 else {
   Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -27,6 +27,6 @@ else {
     if (@($files | Where-Object { $_ -match '(^|/)(\.git|framework\.lock|workflow-state\.json|repository\.operations\.json|build)(/|$)' }).Count) { $failures.Add('repository-metadata-leaked') }
   } finally { $zip.Dispose() }
 }
-$result = [ordered]@{schema_version=1;result=$(if($failures.Count){'failed'}else{'passed'});product_build='0.1.5';schema_version_product='0.1.2';artifact='build/dev/atlas-shipping-0.1.5.zip';failures=@($failures)}
+$result = [ordered]@{schema_version=1;result=$(if($failures.Count){'failed'}else{'passed'});product_build='0.1.6';schema_version_product='0.1.3';artifact='build/dev/atlas-shipping-0.1.6.zip';failures=@($failures)}
 $result | ConvertTo-Json -Depth 8
 if ($failures.Count -and -not $NoExitFailure) { exit 1 }

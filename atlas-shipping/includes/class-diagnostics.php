@@ -6,7 +6,7 @@ class Diagnostics {
   if(!current_user_can('manage_options'))wp_die();
   global $wpdb;
   $m=new Migrator();
-  $tables=array('activity'=>$wpdb->prefix.'atlas_shipping_activity','identities'=>$wpdb->prefix.'atlas_shipping_identities','magic tokens'=>$wpdb->prefix.'atlas_shipping_magic_tokens','sessions'=>$wpdb->prefix.'atlas_shipping_sessions');
+  $tables=array('activity'=>$wpdb->prefix.'atlas_shipping_activity','identities'=>$wpdb->prefix.'atlas_shipping_identities','magic tokens'=>$wpdb->prefix.'atlas_shipping_magic_tokens','sessions'=>$wpdb->prefix.'atlas_shipping_sessions','shipping requests'=>$wpdb->prefix.'atlas_shipping_requests','shipping stops'=>$wpdb->prefix.'atlas_shipping_stops','shipping items'=>$wpdb->prefix.'atlas_shipping_items','shipping snapshots'=>$wpdb->prefix.'atlas_shipping_snapshots');
   $installed=(string)get_option(Migrator::OPTION_SCHEMA_VERSION,'');
   $migration_error=(string)get_option(Migrator::OPTION_LAST_ERROR,'');
   $auth_error=(string)get_option(Authentication::OPTION_LAST_AUTH_ERROR,'');
@@ -23,6 +23,7 @@ class Diagnostics {
   $this->row('Frontend localization status','Healthy: strings supplied by WordPress translations');
   $this->row('Accessibility status','Healthy: focus management and hidden-drawer controls enabled');
   $this->row('Authentication integration status',class_exists('AtlasShipping\\Authentication')&&class_exists('AtlasShipping\\Sessions')?'Healthy':'Failed');
+  $this->row('Shipping domain registration',class_exists('AtlasShipping\\Shipping\\Service')&&class_exists('AtlasShipping\\Shipping\\RequestRepository')?'Healthy':'Failed');
   $this->row('Plugin version',ATLAS_SHIPPING_VERSION);
   $this->row('Expected schema',ATLAS_SHIPPING_SCHEMA_VERSION);
   $this->row('Installed schema',$installed?:'Not installed');

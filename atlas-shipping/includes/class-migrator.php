@@ -37,6 +37,10 @@ class Migrator {
                 'id' => '004_sessions', 'version' => '0.1.2',
                 'file' => ATLAS_SHIPPING_DIR . 'includes/migrations/004-sessions.php',
             ),
+            array(
+                'id' => '005_shipping_domain', 'version' => '0.1.3',
+                'file' => ATLAS_SHIPPING_DIR . 'includes/migrations/005-shipping-domain.php',
+            ),
         );
     }
 
@@ -183,7 +187,11 @@ class Migrator {
         return $this->table_exists( $wpdb->prefix . 'atlas_shipping_activity' )
             && $this->table_exists( $wpdb->prefix . 'atlas_shipping_identities' )
             && $this->table_exists( $wpdb->prefix . 'atlas_shipping_magic_tokens' )
-            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_sessions' );
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_sessions' )
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_requests' )
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_stops' )
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_items' )
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_snapshots' );
     }
 
     public static function log_activity( $type, $summary, $metadata = array(), $object_type = 'plugin', $object_id = null ) {

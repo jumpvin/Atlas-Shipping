@@ -5,12 +5,12 @@
 - Repository: `jumpvin/Atlas-Shipping`
 - Authorized development branch: `bootstrap/atlas-initialization`
 - Repository state: `operational`
-- Current product build: `0.1.5`
-- Current product schema: `0.1.2`
+- Current product build: `0.1.6`
+- Current product schema: `0.1.3`
 - Current milestone: `ATLAS-M001`
-- Current milestone status: `active`
-- Next owner: `Builder`
-- Next command: `Implement Milestone`
+- Current milestone status: `implemented`
+- Next owner: `Architecture`
+- Next command: `Review`
 
 The repository bootstrap milestone `ATLAS-INIT-001` has passed Architecture review. The active product-development milestone is `ATLAS-M001 — Shipping Data Foundation`.
 

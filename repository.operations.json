@@ -13,17 +13,17 @@
   },
   "readiness": {
     "extension_lock_glob": "docs/extensions/*.lock",
-    "baseline_certification": "build/reports/atlas-shipping-0.1.5/validation.json",
+    "baseline_certification": "build/reports/atlas-shipping-0.1.6/validation.json",
     "required_tools": ["git", "powershell", "php"],
     "required_packages": [],
     "required_capabilities": ["git.remote.fetch", "git.remote.push"]
   },
   "operations": {
-    "lint": {"command": "./scripts/validate-atlas-shipping.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
-    "test_isolated": {"command": null, "result_gate": "implementation-blocking", "applicability": "not-applicable"},
+    "lint": {"command": "./scripts/validate-shipping-foundation.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
+    "test_isolated": {"command": "./scripts/validate-shipping-foundation.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
     "test_integration": {"command": null, "result_gate": "review-blocking", "applicability": "not-applicable"},
     "test_manual": {"command": null, "result_gate": "acceptance-blocking", "applicability": "not-applicable"},
-    "validate": {"command": "./scripts/validate-atlas-shipping.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
+    "validate": {"command": "./scripts/validate-shipping-foundation.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
     "package": {"command": "./scripts/package-atlas-shipping.ps1", "result_gate": "review-blocking", "applicability": "required"},
     "package_validate": {"command": "./scripts/validate-atlas-shipping.ps1", "result_gate": "review-blocking", "applicability": "required"}
   },

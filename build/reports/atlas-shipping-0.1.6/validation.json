@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "result": "passed_with_runtime_checks_not_run",
+  "product_build": "0.1.6",
+  "product_schema": "0.1.3",
+  "artifact": "build/dev/atlas-shipping-0.1.6.zip",
+  "artifact_sha256": "261f983cf2504d3a162c055f1e433bbf66ebc522d2c4e67056bb192a027829d7",
+  "static_shipping_contract": "passed",
+  "package_boundary": "passed",
+  "framework_validation": "passed",
+  "historical_migrations_001_004": "unchanged",
+  "prohibited_ui_surfaces": "unchanged",
+  "php_interpreter_lint": "not-run-php-unavailable",
+  "wordpress_database_runtime": "not-run-runtime-unavailable",
+  "runtime_checks_not_run": [
+    "fresh and upgrade migration execution",
+    "dbDelta rerun/idempotency and live index inspection",
+    "repository CRUD and public-ID collision behavior",
+    "aggregate relationship persistence",
+    "activity database insertion",
+    "snapshot persistence/immutability",
+    "transaction rollback simulation"
+  ]
+}
