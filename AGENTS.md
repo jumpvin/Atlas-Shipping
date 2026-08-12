@@ -5,14 +5,14 @@
 - Repository: `jumpvin/Atlas-Shipping`
 - Authorized development branch: `bootstrap/atlas-initialization`
 - Repository state: `operational`
-- Current implemented product build: `0.1.7`
+- Current accepted product build: `0.1.7`
 - Current product schema: `0.1.4`
-- Current milestone: `ATLAS-M002`
-- Current milestone status: `implemented`
-- Next owner: `Architecture`
-- Next command: `Review`
+- Current milestone: `ATLAS-M003`
+- Current milestone status: `active`
+- Next owner: `Builder`
+- Next command: `Implement Milestone`
 
-`ATLAS-M001 — Shipping Data Foundation` passed Architecture review. `ATLAS-M002 — Shipping Request Editor` is implemented and awaits Architecture review.
+`ATLAS-M001 — Shipping Data Foundation` and `ATLAS-M002 — Shipping Request Editor` have passed Architecture review. The active product-development milestone is `ATLAS-M003 — Request Management & Full-Width Application Experience`.
 
 ## Role
 
@@ -52,13 +52,13 @@ Before planning, prove current milestone ID/status, build, release target, branc
 
 ## Runtime Validation
 
-A local WordPress test site/runtime is available to Builder and was successfully used during ATLAS-M001 review corrections. Use it for ATLAS-M002 runtime validation where available. Record only tests actually executed; do not fabricate browser/runtime evidence.
+A local WordPress/MySQL test site/runtime is available to Builder. Use it for ATLAS-M003 runtime validation. Hands-on testing of `0.1.7` confirmed the application is functional but visually constrained by the WordPress theme's narrow content column; correcting that application-page real-estate problem is explicit milestone scope. Record only tests actually executed; do not fabricate browser/runtime evidence.
 
-## Git and safety
+## Git and Safety
 
 Use only the authorized branch. Do not create/switch branches, merge, rebase, force-push, delete, stash, or discard work without explicit authority. Commit/push only when the active milestone authorizes it. Preserve unrelated changes and report omissions/failures.
 
-For `ATLAS-M002`, commits and pushes are authorized only to `bootstrap/atlas-initialization`. Merging to `master` is not authorized.
+For `ATLAS-M003`, commits and pushes are authorized only to `bootstrap/atlas-initialization`. Merging to `master` is not authorized.
 
 ## Completion
 
