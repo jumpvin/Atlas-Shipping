@@ -1,0 +1,13 @@
+framework:
+  name: "Modular Development Framework"
+  adopted-version: "0.3.9"
+  package-build: "0.3.9-dev.18.9"
+  baseline-branch: "master"
+  baseline-commit: "f747ac01aeef7eb0a21cf1ce49808590942a0f23"
+  development-branch: "bootstrap/atlas-initialization"
+  release-target: "0.1.x"
+  current-milestone: "ATLAS-INIT-001"
+  current-build: "0.1.5"
+  bootstrap-status: "bootstrap"
+  source-package: "modular-development-framework-v0.3.9-dev.18.9.zip"
+  source-package-sha256: "2bfd43b13dc82ce3e0de8bb6ee02b317031abe5172641e18aeaff72f3a0c8a53"
