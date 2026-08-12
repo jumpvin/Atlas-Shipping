@@ -1,0 +1,3 @@
+build/dev/*.zip
+build/rc/*.zip
+build/prod/*.zip

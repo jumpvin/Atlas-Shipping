@@ -1,0 +1,8 @@
+{
+  "name": "Modular Development Framework",
+  "version": "0.3.9-dev.18.9",
+  "package_build": "0.3.9-dev.18.9",
+  "release_target": "0.3.9",
+  "repository": "jumpvin/Atlas-Shipping",
+  "authorized_branch": "bootstrap/atlas-initialization"
+}

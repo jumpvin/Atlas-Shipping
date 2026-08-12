@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modular-development-framework.local/repository-operations-schema.json",
+  "title": "Repository Operations Manifest",
+  "type": "object",
+  "required": ["schema_version", "repository", "repository_identity_source", "branches", "environment", "readiness", "operations", "artifacts"],
+  "properties": {
+    "schema_version": { "const": 2 },
+    "repository": { "type": "string", "minLength": 1 },
+    "repository_identity_source": { "type": "string", "minLength": 1 },
+    "branches": {
+      "type": "object",
+      "required": ["release_pattern"],
+      "properties": {
+        "authorized": { "type": ["string", "null"] },
+        "release_pattern": { "type": "string", "minLength": 1 },
+        "synchronization": { "enum": ["fetch-prune-fast-forward-only"] }
+      },
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "required": ["shell"],
+      "properties": { "shell": { "type": "string" }, "notes": { "type": "string" } },
+      "additionalProperties": false
+    },
+    "readiness": {
+      "type": "object",
+      "required": ["extension_lock_glob", "baseline_certification", "required_tools", "required_packages", "required_capabilities"],
+      "properties": {
+        "extension_lock_glob": {"type":"string","minLength":1},
+        "baseline_certification": {"type":"string","minLength":1},
+        "required_tools": {"type":"array","items":{"type":"string"}},
+        "required_packages": {"type":"array","items":{"type":"object","required":["identity","path","sha256"],"properties":{"identity":{"type":"string"},"path":{"type":"string"},"sha256":{"type":"string","pattern":"^[a-fA-F0-9]{64}$"}},"additionalProperties":false}},
+        "required_capabilities": {"type":"array","items":{"enum":["git.remote.fetch","git.remote.push"]}}
+      },
+      "additionalProperties": false
+    },
+    "operations": {
+      "type": "object",
+      "required": ["validate", "package", "package_validate"],
+      "additionalProperties": {
+        "type": "object",
+        "required": ["result_gate", "applicability"],
+        "properties": {
+          "argv": { "type": "array", "items": {"type":"string"}, "minItems": 1 },
+          "command": { "type": ["string", "null"] },
+          "result_gate": { "enum": ["implementation-blocking", "review-blocking", "acceptance-blocking", "release-blocking", "informational"] },
+          "applicability": { "enum": ["required", "optional", "conditional", "not-applicable"], "description": "conditional means required only when the command's documented repository state predicate is true" }
+        },
+        "additionalProperties": false,
+        "anyOf": [{"required":["argv"]},{"required":["command"]}]
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["development", "release_candidate", "production", "reports"],
+      "properties": {
+        "development": { "type": "string" },
+        "release_candidate": { "type": "string" },
+        "production": { "type": "string" },
+        "reports": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

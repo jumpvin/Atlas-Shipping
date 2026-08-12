@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "repository": "jumpvin/Atlas-Shipping",
+  "repository_identity_source": "declared-and-origin-verified",
+  "branches": {
+    "authorized": "bootstrap/atlas-initialization",
+    "release_pattern": "release/<target-version>",
+    "synchronization": "fetch-prune-fast-forward-only"
+  },
+  "environment": {
+    "shell": "PowerShell",
+    "notes": "ATLAS Shipping WordPress plugin operations"
+  },
+  "readiness": {
+    "extension_lock_glob": "docs/extensions/*.lock",
+    "baseline_certification": "build/reports/atlas-shipping-0.1.5/validation.json",
+    "required_tools": ["git", "powershell", "php"],
+    "required_packages": [],
+    "required_capabilities": ["git.remote.fetch", "git.remote.push"]
+  },
+  "operations": {
+    "lint": {"command": "./scripts/validate-atlas-shipping.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
+    "test_isolated": {"command": null, "result_gate": "implementation-blocking", "applicability": "not-applicable"},
+    "test_integration": {"command": null, "result_gate": "review-blocking", "applicability": "not-applicable"},
+    "test_manual": {"command": null, "result_gate": "acceptance-blocking", "applicability": "not-applicable"},
+    "validate": {"command": "./scripts/validate-atlas-shipping.ps1", "result_gate": "implementation-blocking", "applicability": "required"},
+    "package": {"command": "./scripts/package-atlas-shipping.ps1", "result_gate": "review-blocking", "applicability": "required"},
+    "package_validate": {"command": "./scripts/validate-atlas-shipping.ps1", "result_gate": "review-blocking", "applicability": "required"}
+  },
+  "artifacts": {
+    "development": "build/dev",
+    "release_candidate": "build/rc",
+    "production": "build/prod",
+    "reports": "build/reports"
+  }
+}

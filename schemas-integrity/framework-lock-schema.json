@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "framework-lock-schema.json",
+  "title": "Product framework.lock semantic schema",
+  "type": "object",
+  "required": ["name", "adopted-version", "package-build", "baseline-branch", "baseline-commit", "development-branch", "release-target", "current-milestone", "current-build", "bootstrap-status", "source-package", "source-package-sha256"],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "adopted-version": {"type": "string", "minLength": 1},
+    "package-build": {"type": "string", "minLength": 1},
+    "baseline-branch": {"type": "string", "minLength": 1},
+    "baseline-commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "development-branch": {"type": "string", "minLength": 1},
+    "release-target": {"type": "string", "minLength": 1},
+    "current-milestone": {"type": ["string", "null"]},
+    "current-build": {"type": ["string", "null"]},
+    "bootstrap-status": {"enum": ["bootstrap", "operational"]},
+    "source-package": {"type": "string", "minLength": 1},
+    "source-package-sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

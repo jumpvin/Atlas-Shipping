@@ -1,0 +1,575 @@
+﻿{
+    "schema_version":  1,
+    "product":  "Modular Development Framework",
+    "version":  "0.3.8",
+    "baseline_commit":  "da1b3bd69960b19a8f522fac77fe28d9063f213c",
+    "identity_type":  "git-tree-and-blob-identity",
+    "file_count":  113,
+    "files":  [
+                  {
+                      "path":  "adopt-extension-command.md",
+                      "mode":  "100644",
+                      "git_blob":  "15de01f43fc7f9f267b95a96cd69ac75abe2bb25"
+                  },
+                  {
+                      "path":  "architect-review-report.md",
+                      "mode":  "100644",
+                      "git_blob":  "f9cf9e993e2360cfb06e0642bb281719393fdeb0"
+                  },
+                  {
+                      "path":  "architect-review.md",
+                      "mode":  "100644",
+                      "git_blob":  "377cee13f255185f84951eb06719fafdc85db327"
+                  },
+                  {
+                      "path":  "architecture-drift-control.html",
+                      "mode":  "100644",
+                      "git_blob":  "f6981b7539caf5c0d696656c8695c3327f499da3"
+                  },
+                  {
+                      "path":  "architecture-drift-control.md",
+                      "mode":  "100644",
+                      "git_blob":  "1ace1dbd6d117adc320e0fc94a858a7c7fe90c11"
+                  },
+                  {
+                      "path":  "architecture-project-setup.html",
+                      "mode":  "100644",
+                      "git_blob":  "1c371a63f69ec1fb9da10b6aa6723321798f8dd5"
+                  },
+                  {
+                      "path":  "architecture-project-setup.md",
+                      "mode":  "100644",
+                      "git_blob":  "4c615a480b92209afe5379d908c4de393887123f"
+                  },
+                  {
+                      "path":  "artifact-identity-model.md",
+                      "mode":  "100644",
+                      "git_blob":  "99fa1989fd4299556840dafb54a24a78fe4b4f6d"
+                  },
+                  {
+                      "path":  "attached-milestone-ingestion.md",
+                      "mode":  "100644",
+                      "git_blob":  "296b4be7e5ba378523358a546ea3a016a664554c"
+                  },
+                  {
+                      "path":  "automatic-command-contracts.md",
+                      "mode":  "100644",
+                      "git_blob":  "240c4268302f4b75d8fa9a8eba483ca04aa8fafb"
+                  },
+                  {
+                      "path":  "branch-management-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "d1a7bb712294797c01796f155415607d4adddcb1"
+                  },
+                  {
+                      "path":  "branch-management-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "54990920c80e684ed424c472664d6b7a94166ab3"
+                  },
+                  {
+                      "path":  "build-and-release-versioning.md",
+                      "mode":  "100644",
+                      "git_blob":  "120833286810dca4b227c530dbf2c57caed57496"
+                  },
+                  {
+                      "path":  "build-artifact-layout-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "e316dca73bbd3ba26f84ccad3ed67bf89c5038c1"
+                  },
+                  {
+                      "path":  "build-artifact-layout.md",
+                      "mode":  "100644",
+                      "git_blob":  "bca636f14c7b52fa6e80c28895f5dfb8a4778b7d"
+                  },
+                  {
+                      "path":  "build-directory-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "2b8a40b959fd97f904399c32f9f42ad739a24ddf"
+                  },
+                  {
+                      "path":  "build-versioning-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "5165a6d21de2ca608274788d987dd19211c6dc38"
+                  },
+                  {
+                      "path":  "builder-agent-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "156d54bd3014adc56fbb3e663cb1556809346a6d"
+                  },
+                  {
+                      "path":  "builder-agent-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "235297115b5d400d1e8c21bcc1783cb356f2adf5"
+                  },
+                  {
+                      "path":  "canonical-authority-model.md",
+                      "mode":  "100644",
+                      "git_blob":  "7aae76bf0334bb1cfd88642ae4851f1b90356e28"
+                  },
+                  {
+                      "path":  "changelog.md",
+                      "mode":  "100644",
+                      "git_blob":  "cd594151a0a1e6d882e035fe4f594d3c8d7db36a"
+                  },
+                  {
+                      "path":  "codex-setup.html",
+                      "mode":  "100644",
+                      "git_blob":  "ce5efb4bab376fe99a9e47f6c9525c4265ee7573"
+                  },
+                  {
+                      "path":  "codex-setup.md",
+                      "mode":  "100644",
+                      "git_blob":  "384cc4d6f44e7de0b96064573cefce7d7fa40f53"
+                  },
+                  {
+                      "path":  "command-format.md",
+                      "mode":  "100644",
+                      "git_blob":  "7a2e991753bca3bbc81254f91f2b73e357cee7da"
+                  },
+                  {
+                      "path":  "commands-human-daily.md",
+                      "mode":  "100644",
+                      "git_blob":  "59964e75d420c00a30fd78c65a05fdbf94b98851"
+                  },
+                  {
+                      "path":  "commands-human.md",
+                      "mode":  "100644",
+                      "git_blob":  "58b8949524715d40632c63efca9b92804516c748"
+                  },
+                  {
+                      "path":  "commands.html",
+                      "mode":  "100644",
+                      "git_blob":  "08e05a07ce8d17bf2e45d591c6c767d7ff91966f"
+                  },
+                  {
+                      "path":  "commands.md",
+                      "mode":  "100644",
+                      "git_blob":  "2cc476add648fcb1d9e2989a0abf504c082bd42e"
+                  },
+                  {
+                      "path":  "connected-repository-workflow.html",
+                      "mode":  "100644",
+                      "git_blob":  "6d78ab289af601b2ee02f29f4b07de91460749c4"
+                  },
+                  {
+                      "path":  "connected-repository-workflow.md",
+                      "mode":  "100644",
+                      "git_blob":  "92848f566ded450ec3e0d4aca49a49061d7d234c"
+                  },
+                  {
+                      "path":  "continue-project-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "9c2a54cd6142cca0f887889b9473bd15353d99eb"
+                  },
+                  {
+                      "path":  "continue-project-guide.md",
+                      "mode":  "100644",
+                      "git_blob":  "38db5f9bd8990e3c997c5b26bf60fc7e3825558e"
+                  },
+                  {
+                      "path":  "daily-workflow.html",
+                      "mode":  "100644",
+                      "git_blob":  "a3364941e6fa9129a429c56a0c93cac702ffd130"
+                  },
+                  {
+                      "path":  "daily-workflow.md",
+                      "mode":  "100644",
+                      "git_blob":  "0c8a963d16775a3041bf7703339896abde2b860b"
+                  },
+                  {
+                      "path":  "deterministic-framework-update.md",
+                      "mode":  "100644",
+                      "git_blob":  "c09f7aa52b83769c473961398eaf3f408ea2bca1"
+                  },
+                  {
+                      "path":  "developer-setup.html",
+                      "mode":  "100644",
+                      "git_blob":  "0ed7fbced2796d1d5babbb7a3b873c163c380e4f"
+                  },
+                  {
+                      "path":  "developer-setup.md",
+                      "mode":  "100644",
+                      "git_blob":  "9b1b7c215fe5d9c44a193e604b7363ea0bee018f"
+                  },
+                  {
+                      "path":  "development-environment-profile.md",
+                      "mode":  "100644",
+                      "git_blob":  "363af14ce189149819baf4bb6b7f12f1c83cbdc6"
+                  },
+                  {
+                      "path":  "development-principles.md",
+                      "mode":  "100644",
+                      "git_blob":  "15a2a2109280cc7b7e261da558e8e56840e5482a"
+                  },
+                  {
+                      "path":  "document-classification-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "b7fa655abe6cef4dde8f896f198eeedcf4f73393"
+                  },
+                  {
+                      "path":  "documentation-system.md",
+                      "mode":  "100644",
+                      "git_blob":  "7ae292bf423b7a5a5c6098adb4bfb46c92985ce1"
+                  },
+                  {
+                      "path":  "existing-project-adoption.md",
+                      "mode":  "100644",
+                      "git_blob":  "42be80dbe617dc43fd24f3dd80f8a74adffee857"
+                  },
+                  {
+                      "path":  "existing-project-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "053a2024463abc88c1c55cd6ae56e9a84be46e13"
+                  },
+                  {
+                      "path":  "existing-project-guide.md",
+                      "mode":  "100644",
+                      "git_blob":  "c3d8175d121d18429ea7e96ed26bd523d8b3b77c"
+                  },
+                  {
+                      "path":  "extension-adoption-contract-template.md",
+                      "mode":  "100644",
+                      "git_blob":  "4084b9fccc4568a88f3c7777b42325b782b2a3c1"
+                  },
+                  {
+                      "path":  "extension-adoption-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "9ef333698202b4ffb9be431b95c62aeba5f76848"
+                  },
+                  {
+                      "path":  "extension-adoption-guide.md",
+                      "mode":  "100644",
+                      "git_blob":  "3cb254a259059a24ef5b2d5c061b57e905ac9d40"
+                  },
+                  {
+                      "path":  "extension-adoption-package-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "03b6e8bb677c3fe2fdcc079c9167123681ec21d1"
+                  },
+                  {
+                      "path":  "extension-adoption-validation.md",
+                      "mode":  "100644",
+                      "git_blob":  "8a89e75211524636026d767df1c90b49ef4539d9"
+                  },
+                  {
+                      "path":  "extension-authority-model.md",
+                      "mode":  "100644",
+                      "git_blob":  "576b075d817249b9b109f4b73a3f44b8f6b9888e"
+                  },
+                  {
+                      "path":  "extension-lock-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "2cf3326025bde407330adeb291fa5792c7ea8296"
+                  },
+                  {
+                      "path":  "extension-manifest-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "1d8a58084ff1d4464ec852bafa5c2f863140e05d"
+                  },
+                  {
+                      "path":  "extension-milestone-integration.md",
+                      "mode":  "100644",
+                      "git_blob":  "c63ea6adccd4fd13ba0ce9bbbe7947f30843bc6f"
+                  },
+                  {
+                      "path":  "extension-system.md",
+                      "mode":  "100644",
+                      "git_blob":  "92ca4f383cd5efbac5fef4878ac8375ee6c45183"
+                  },
+                  {
+                      "path":  "faq.html",
+                      "mode":  "100644",
+                      "git_blob":  "0bea51b026e5239c8296c27a2451d2e09e6a3283"
+                  },
+                  {
+                      "path":  "faq.md",
+                      "mode":  "100644",
+                      "git_blob":  "59a077d679e0e344c73d0a75cba7d7b73c60d244"
+                  },
+                  {
+                      "path":  "filename-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "66ec8dfe89ebbc49dff5049f4a0cca7009e90a53"
+                  },
+                  {
+                      "path":  "framework-access-status.html",
+                      "mode":  "100644",
+                      "git_blob":  "e244b38b000d0f1c08e1f2a07d890d4255147084"
+                  },
+                  {
+                      "path":  "framework-access-status.md",
+                      "mode":  "100644",
+                      "git_blob":  "b1df7e0544830509146a0dc905408fd011aa5253"
+                  },
+                  {
+                      "path":  "framework-instructions.md",
+                      "mode":  "100644",
+                      "git_blob":  "30bc283a3886c51648ebffa6c4bd61ded64027ec"
+                  },
+                  {
+                      "path":  "framework-lock-template.yaml",
+                      "mode":  "100644",
+                      "git_blob":  "57c88e4d46c0fae5c12dbe9a3325798a3397ba7a"
+                  },
+                  {
+                      "path":  "framework-lock.md",
+                      "mode":  "100644",
+                      "git_blob":  "9eabb3e198e1c66f563dc579a3a474ecb218d674"
+                  },
+                  {
+                      "path":  "framework-migration-contract-template.md",
+                      "mode":  "100644",
+                      "git_blob":  "4951bc96ea6ba14e8744060089a209127db2dec4"
+                  },
+                  {
+                      "path":  "framework-migration-package-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "bb4e8ba73e581084820af7dff8d1d49238609952"
+                  },
+                  {
+                      "path":  "framework-package-supersession.md",
+                      "mode":  "100644",
+                      "git_blob":  "2a2bf3127337f1e7fa863c296f076e459d714b14"
+                  },
+                  {
+                      "path":  "framework-update-automation.md",
+                      "mode":  "100644",
+                      "git_blob":  "8dd054d6dfcc89d03f3d36e17459d11c9f91ede3"
+                  },
+                  {
+                      "path":  "framework-update-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "cede71d7abc4e9d3d1290437a528501780416de3"
+                  },
+                  {
+                      "path":  "framework-update-validation.md",
+                      "mode":  "100644",
+                      "git_blob":  "b5113e85fff4f18964bc96b74c7c3cf4fb73c9cf"
+                  },
+                  {
+                      "path":  "framework-update.md",
+                      "mode":  "100644",
+                      "git_blob":  "de29b614a8d9306d2b33643111de24185031401f"
+                  },
+                  {
+                      "path":  "framework.json",
+                      "mode":  "100644",
+                      "git_blob":  "095ecd3cc81ef76057d098c12c009f81f066a8ac"
+                  },
+                  {
+                      "path":  "generated-artifacts.md",
+                      "mode":  "100644",
+                      "git_blob":  "ad9ec64d53a821846b88e9f434e7464827ab5e80"
+                  },
+                  {
+                      "path":  "github-setup.html",
+                      "mode":  "100644",
+                      "git_blob":  "35e8c11ed5e37a702017705fc3f0173f28f2d3f7"
+                  },
+                  {
+                      "path":  "github-setup.md",
+                      "mode":  "100644",
+                      "git_blob":  "2f93ef5893ef832a4f187d9f6ccb82ca7079077f"
+                  },
+                  {
+                      "path":  "gitignore-build-template.txt",
+                      "mode":  "100644",
+                      "git_blob":  "dab341c147c3e4c454bac344bb839143ae0da03d"
+                  },
+                  {
+                      "path":  "gitignore-standard.md",
+                      "mode":  "100644",
+                      "git_blob":  "bf5fbd218fe0e0594b61f5c144ec7e73c3bb6b64"
+                  },
+                  {
+                      "path":  "guide-styles.css",
+                      "mode":  "100644",
+                      "git_blob":  "31eb89620a1bcae2533eff6c933fed9456e84a3a"
+                  },
+                  {
+                      "path":  "human-guides.md",
+                      "mode":  "100644",
+                      "git_blob":  "fc2784bb8bad4f00662f7cb4e1f3502b8c8e3ab2"
+                  },
+                  {
+                      "path":  "immutable-milestone-contracts.md",
+                      "mode":  "100644",
+                      "git_blob":  "b6ed9de4b3ecc9812729ab704c1238362e8dba94"
+                  },
+                  {
+                      "path":  "implementation-validation.md",
+                      "mode":  "100644",
+                      "git_blob":  "8912433e48dc60626ed1a79c9ed0765871b14ff9"
+                  },
+                  {
+                      "path":  "milestone-activation.md",
+                      "mode":  "100644",
+                      "git_blob":  "fe3e3cd99a6f14ad6066d19dc2e019d65ae7a683"
+                  },
+                  {
+                      "path":  "milestone-cycle-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "e0e0cea78a4eee5b1b6f31c2038635a6938f3bd2"
+                  },
+                  {
+                      "path":  "milestone-cycle-guide.md",
+                      "mode":  "100644",
+                      "git_blob":  "298f62528e850885b2f32689b2368bcd9cb376aa"
+                  },
+                  {
+                      "path":  "milestone-metadata.md",
+                      "mode":  "100644",
+                      "git_blob":  "7d7f4ce31f84886d20191df2a20d95e170fbc970"
+                  },
+                  {
+                      "path":  "new-project-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "90d12d039fce04d429e2ed0f3d52f24577a8e6c6"
+                  },
+                  {
+                      "path":  "new-project-guide.md",
+                      "mode":  "100644",
+                      "git_blob":  "daa6fdfa9e278f56324343482b2e61be8abe6d12"
+                  },
+                  {
+                      "path":  "package-manifest.md",
+                      "mode":  "100644",
+                      "git_blob":  "ffde16b2dee802f5d1fa0e58dff9561e9f317e5b"
+                  },
+                  {
+                      "path":  "per-file-synchronization-validation.md",
+                      "mode":  "100644",
+                      "git_blob":  "33b5d43723fe91c7fe79e94abb4c3caa9d83af9e"
+                  },
+                  {
+                      "path":  "platform-development-environment-template.md",
+                      "mode":  "100644",
+                      "git_blob":  "e23564ac500d0715502931d7a6b4121c8ac86696"
+                  },
+                  {
+                      "path":  "product-polish-process.md",
+                      "mode":  "100644",
+                      "git_blob":  "5b433eb06cbfd9ae7917f16622ee1db0623bcad1"
+                  },
+                  {
+                      "path":  "production-release-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "f80b9b27540e1869304ea92d790d0d7bc5033651"
+                  },
+                  {
+                      "path":  "production-release-process.md",
+                      "mode":  "100644",
+                      "git_blob":  "0452322eb16737cdb497c3b8e9a63d04ded958bd"
+                  },
+                  {
+                      "path":  "readme.md",
+                      "mode":  "100644",
+                      "git_blob":  "c040231e7db25d34187f3a3bb45645531ea3ec06"
+                  },
+                  {
+                      "path":  "release-system.md",
+                      "mode":  "100644",
+                      "git_blob":  "a62b62438f89c28f8f2b24419ef6e7c5ff773e83"
+                  },
+                  {
+                      "path":  "repository-bootstrap.html",
+                      "mode":  "100644",
+                      "git_blob":  "09af23e08db43d145b924c2bfe5d9b7c1d06fdd7"
+                  },
+                  {
+                      "path":  "repository-bootstrap.md",
+                      "mode":  "100644",
+                      "git_blob":  "35b88e9383bb28833ce9b52e6d9c25c5fc0e6893"
+                  },
+                  {
+                      "path":  "repository-communication-model.html",
+                      "mode":  "100644",
+                      "git_blob":  "c6d60c991e865a9e3e5ec8de04c46de99f6bf0fb"
+                  },
+                  {
+                      "path":  "repository-communication-model.md",
+                      "mode":  "100644",
+                      "git_blob":  "b8f7a6dfa64eb72a808bcc62368f6f8e9413bf03"
+                  },
+                  {
+                      "path":  "repository-managed-files-registry.md",
+                      "mode":  "100644",
+                      "git_blob":  "952278a38edaba0935c1556e80a7ad38284798d6"
+                  },
+                  {
+                      "path":  "repository-readiness-review.html",
+                      "mode":  "100644",
+                      "git_blob":  "b39b7e62ae41a07ae4c9dbf837808c501dbcff6a"
+                  },
+                  {
+                      "path":  "repository-readiness-review.md",
+                      "mode":  "100644",
+                      "git_blob":  "5442820bb4742b082644aee29a206690e91ea130"
+                  },
+                  {
+                      "path":  "repository-synchronization-guide.html",
+                      "mode":  "100644",
+                      "git_blob":  "b8d8dc9ff37f99b183a51f07f82977c7e23c68f0"
+                  },
+                  {
+                      "path":  "repository-synchronization.md",
+                      "mode":  "100644",
+                      "git_blob":  "c87153809ee2e142cb4774c258e103da7302e0e2"
+                  },
+                  {
+                      "path":  "review-system.md",
+                      "mode":  "100644",
+                      "git_blob":  "7b7c3f0b16937043153e1e883e5a5b552171fe61"
+                  },
+                  {
+                      "path":  "self-synchronizing-workflow.md",
+                      "mode":  "100644",
+                      "git_blob":  "3dbdc61c55b2faf53f41ebd41ac7788605574da9"
+                  },
+                  {
+                      "path":  "stale-state-detection.md",
+                      "mode":  "100644",
+                      "git_blob":  "782329ff20ccaf865e37a569d7e96aa5540a538e"
+                  },
+                  {
+                      "path":  "start-here.html",
+                      "mode":  "100644",
+                      "git_blob":  "24b71c88f26b67fb02e8e83b9f6bcaa83d77b143"
+                  },
+                  {
+                      "path":  "start-here.md",
+                      "mode":  "100644",
+                      "git_blob":  "43957dc1ad91232ecd44fe47609fae394b884208"
+                  },
+                  {
+                      "path":  "templates/AGENTS.md",
+                      "mode":  "100644",
+                      "git_blob":  "3f3659d5c7e1a6d994a5996104cf27c94ebbe6b6"
+                  },
+                  {
+                      "path":  "understanding-the-workflow.html",
+                      "mode":  "100644",
+                      "git_blob":  "e6776397e503ae6f6f9a1d912e364276fd482572"
+                  },
+                  {
+                      "path":  "understanding-the-workflow.md",
+                      "mode":  "100644",
+                      "git_blob":  "d7707652aabbc11c3cac3bc66a22d677728ff4f4"
+                  },
+                  {
+                      "path":  "update-extension-command.md",
+                      "mode":  "100644",
+                      "git_blob":  "cc7232345bad3654b08beada0cf830fbf1d36c52"
+                  },
+                  {
+                      "path":  "uploaded-artifact-identity.md",
+                      "mode":  "100644",
+                      "git_blob":  "0487c4493429c41fcf437ad04ad1ffa353fea422"
+                  },
+                  {
+                      "path":  "verify-extension-command.md",
+                      "mode":  "100644",
+                      "git_blob":  "6506464d3b679b9a54b411b9bf0d129f2ef21cad"
+                  }
+              ]
+}

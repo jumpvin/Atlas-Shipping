@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "result": "passed",
+  "artifact": "build/dev/atlas-shipping-0.1.5.zip",
+  "artifact_sha256": "5b58a08355ccf01a92710324d93f1a6a5a639fa955ffbf871673c215b6f74277",
+  "source_package_sha256": "ae192f65eebf5a0de0ffb6e4200cd9b9e4670f8937139c08429f820c1ba1389f",
+  "product_build": "0.1.5",
+  "schema_version_product": "0.1.2",
+  "baseline_files_compared": 27,
+  "baseline_preservation": "byte-for-byte-match",
+  "framework_validation": "passed",
+  "workflow_schema_validation": "passed",
+  "repository_operations_schema_validation": "passed",
+  "extension_package_validation": "passed",
+  "php_files_linted": 18,
+  "php_lint": "passed",
+  "package_boundary_validation": "passed",
+  "manual_wordpress_runtime_validation": "not-run-no-wordpress-runtime"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Modular Development Framework",
+  "version": "0.3.9-dev.18.9",
+  "package_build": "0.3.9-dev.18.9",
+  "release_target": "0.3.9",
+  "governing_framework_version": "0.3.9",
+  "historical_baseline_version": "0.3.8",
+  "package_type": "complete-distribution",
+  "entry_point": "START-HERE.md",
+  "build_artifact_mode": "stage-separated",
+  "architecture_environment": "chatgpt-project",
+  "implementation_environment": "codex-repository",
+  "handoff_model": "architecture-handoff-builder-local-update",
+  "builder_instruction_source": "templates/AGENTS.md",
+  "repository_operations_schema": "schemas-integrity/repository-operations-schema.json",
+  "workflow_state_schema": "schemas-integrity/workflow-state-schema.json",
+  "adoption_plan_schema": "schemas-integrity/canonical-adoption-plan-schema.json",
+  "consumer_validator": "scripts/validate-installed-framework.ps1",
+  "builder_updater": "scripts/update-product-framework.ps1"
+}

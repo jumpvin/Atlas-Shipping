@@ -8,6 +8,6 @@ framework:
   release-target: "0.1.x"
   current-milestone: "ATLAS-INIT-001"
   current-build: "0.1.5"
-  bootstrap-status: "bootstrap"
+  bootstrap-status: "operational"
   source-package: "modular-development-framework-v0.3.9-dev.18.9.zip"
   source-package-sha256: "2bfd43b13dc82ce3e0de8bb6ee02b317031abe5172641e18aeaff72f3a0c8a53"

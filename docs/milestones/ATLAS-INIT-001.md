@@ -1,6 +1,6 @@
 # ATLAS-INIT-001 — Repository Bootstrap and Accepted Baseline Import
 
-Status: active
+Status: implemented
 
 Product: ATLAS Shipping Management
 
@@ -12,9 +12,9 @@ Release line: `0.1.x`
 
 Authorized branch: `bootstrap/atlas-initialization`
 
-Next owner: Builder
+Next owner: Architecture
 
-Next command: Implement Milestone
+Next command: Review
 
 ## Objective
 
