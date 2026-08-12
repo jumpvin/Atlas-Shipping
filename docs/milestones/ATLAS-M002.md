@@ -1,14 +1,14 @@
 # ATLAS-M002 — Shipping Request Editor
 
-Status: active
+Status: implemented
 Product: ATLAS Shipping Management
 Current accepted product build: `0.1.6`
 Target product build: `0.1.7`
 Current accepted schema version: `0.1.3`
 Release line: `0.1.x`
 Authorized branch: `bootstrap/atlas-initialization`
-Next owner: Builder
-Next command: Implement Milestone
+Next owner: Architecture
+Next command: Review
 
 ## Objective
 

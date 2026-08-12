@@ -41,6 +41,10 @@ class Migrator {
                 'id' => '005_shipping_domain', 'version' => '0.1.3',
                 'file' => ATLAS_SHIPPING_DIR . 'includes/migrations/005-shipping-domain.php',
             ),
+            array(
+                'id' => '006_request_preferences', 'version' => '0.1.4',
+                'file' => ATLAS_SHIPPING_DIR . 'includes/migrations/006-request-preferences.php',
+            ),
         );
     }
 

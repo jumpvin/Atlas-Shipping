@@ -1,15 +1,13 @@
 # ATLAS Shipping Management — Current State
 
-- Current accepted build: `0.1.6`
-- Current schema: `0.1.3`
+- Current implemented build: `0.1.7`
+- Current schema: `0.1.4`
 - Release line: `0.1.x`
-- Accepted functionality: through Shipping Data Foundation
-- Previous milestone: `ATLAS-M001` (Architecture accepted after review corrections and WordPress/MySQL runtime validation)
-- Current repository milestone: `ATLAS-M002 — Shipping Request Editor` (`active`)
-- Next owner: Builder
-- Next command: `Implement Milestone`
-- Target build: `0.1.7`
+- Accepted functionality: through Shipping Data Foundation (`ATLAS-M001`)
+- Current repository milestone: `ATLAS-M002 — Shipping Request Editor` (`implemented`)
+- Next owner: Architecture
+- Next command: `Review`
 
-Accepted baseline includes passwordless authentication, private application sessions, application shell/router/accessibility, diagnostics, migrations `001` through `005`, shipping request/stops/items/snapshot persistence, repository/service/model boundaries, optimistic concurrency, actor-attributed activity, and shortcode `atlas_shipping_app`.
+Build `0.1.7` adds the isolated New Request single-page editor, session-authenticated and CSRF-protected REST boundary, meaningful autosave and latest-draft resume, ordered stop/item editing, request transportation preferences through migration `006`, optimistic concurrency, structured submission validation, and deliberate transition through `submitted`.
 
-ATLAS-M002 is authorized to replace only the New Request placeholder with the single-page card-based editor, authenticated API, meaningful autosave/draft resume, stops/items editing, transportation/handling preferences, and deliberate submission through `submitted`. Later coordinator, shipper handoff, request-list management, notification, delivery-verification, and Excel workflows remain unimplemented.
+The accepted `0.1.6` authentication, shell, diagnostics, migrations `001`–`005`, shipping repositories/services/snapshots, Framework authority, and WordPress profile lock remain preserved. Shipping Coordinator, shipper handoff/snapshot, lists, notification, scheduling, freight-cost, delivery-verification, attachments, and Excel workflows remain unimplemented.

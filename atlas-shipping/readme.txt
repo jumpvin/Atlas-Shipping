@@ -3,7 +3,7 @@ Contributors: atlas
 Tags: shipping, operations, passwordless
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.1.6
+Stable tag: 0.1.7
 License: GPLv2 or later
 
 Private frontend foundation for ATLAS Shipping.
@@ -12,7 +12,7 @@ Private frontend foundation for ATLAS Shipping.
 Version 0.1.6 adds the backend Shipping Data Foundation: durable request, ordered stop/item, snapshot, repository, and service architecture. Shipping request UI and workflow actions are intentionally not included.
 
 == Installation ==
-Upload atlas-shipping-0.1.6.zip through Plugins > Add Plugin > Upload Plugin and activate it. Existing identities, sessions, migrations, and application-page configuration remain compatible.
+Upload atlas-shipping-0.1.7.zip through Plugins > Add Plugin > Upload Plugin and activate it. Existing identities, sessions, migrations, and application-page configuration remain compatible.
 
 == Shortcode ==
 [atlas_shipping_app]

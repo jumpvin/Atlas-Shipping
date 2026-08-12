@@ -1,4 +1,5 @@
 <?php if(!defined('ABSPATH'))exit; ?>
+<script>window.AtlasShippingApp=<?php echo wp_json_encode($app_config,JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT); ?>;</script>
 <div class="atlas-shipping-app atlas-app-loading" data-atlas-shipping-app>
  <a class="atlas-skip-link" href="#atlas-main-content"><?php esc_html_e('Skip to content','atlas-shipping');?></a>
  <div class="atlas-app-shell">

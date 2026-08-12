@@ -5,14 +5,14 @@
 - Repository: `jumpvin/Atlas-Shipping`
 - Authorized development branch: `bootstrap/atlas-initialization`
 - Repository state: `operational`
-- Current accepted product build: `0.1.6`
-- Current product schema: `0.1.3`
+- Current implemented product build: `0.1.7`
+- Current product schema: `0.1.4`
 - Current milestone: `ATLAS-M002`
-- Current milestone status: `active`
-- Next owner: `Builder`
-- Next command: `Implement Milestone`
+- Current milestone status: `implemented`
+- Next owner: `Architecture`
+- Next command: `Review`
 
-`ATLAS-M001 — Shipping Data Foundation` passed Architecture review after the canonical review corrections and live WordPress/MySQL validation. `ATLAS-M002 — Shipping Request Editor` is now the active product-development milestone.
+`ATLAS-M001 — Shipping Data Foundation` passed Architecture review. `ATLAS-M002 — Shipping Request Editor` is implemented and awaits Architecture review.
 
 ## Role
 

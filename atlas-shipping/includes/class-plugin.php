@@ -7,6 +7,7 @@ class Plugin {
   ( new Migrator() )->maybe_migrate();
   ( new Authentication() )->register();
   ( new Frontend() )->register();
+  ( new EditorApi() )->register();
   if ( is_admin() ) { ( new Admin() )->register(); }
  }
 }
