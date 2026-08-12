@@ -53,6 +53,8 @@ class Frontend {
     'saveFailed'=>__('Save failed. Try again.','atlas-shipping'),'conflict'=>__('This request changed elsewhere. Reload to continue safely.','atlas-shipping'),
     'resumedDraft'=>__('Your most recently updated draft was resumed.','atlas-shipping'),'submitRequest'=>__('Submit Shipping Request','atlas-shipping')
    );
+   $editor_strings=array();
+   foreach(array('ATLAS Shipping','New Request','Enter the shipment details below. Your meaningful work saves automatically.','Project / Request Details','Project ID','Internal ID','Client','Project / Job Site Name','Requested Ship Date','Required Delivery Date','Delivery date firmness','General request / project notes','Client requested','Stops','Times are entered in your local timezone and stored canonically.','Pickup','Delivery','Additional stop','Stop type','Site / company','Address line 1','Address line 2','City','State / region','Postal code','Country','Contact name','Contact phone','Contact email','Window start','Window end','Handling responsibility','Equipment notes','Stop instructions','Appointment required','Dock available','Forklift available','Move stop up','Move stop down','Remove','Remove this saved record? This cannot be undone.','Add stop','Shipment Items','Shipment item','Quantity','Description','Length','Width','Height','Dimension unit','Weight','Weight basis','Weight unit','Packaging type','Special handling / notes','Stackable','Fork pockets','Weather sensitive','Move item up','Move item down','Add item','Transportation / Handling Preferences','Preferred vehicle / equipment','Transportation comment','Shipping service loads at pickup','Shipping service unloads at delivery','Third-party loading help may be needed','Third-party unloading help may be needed','Please review:','Request submitted','Your shipping request %s was submitted successfully.')as$text){$editor_strings[$text]=__($text,'atlas-shipping');}
    $app_config=array(
     'version'=>ATLAS_SHIPPING_VERSION,'frontendVersion'=>self::FRONTEND_VERSION,'buildFingerprint'=>ATLAS_SHIPPING_BUILD_FINGERPRINT,
     'defaultRoute'=>'home','routes'=>self::routes(),'loginUrl'=>add_query_arg('atlas_session_expired','1',get_permalink()),'restUrl'=>esc_url_raw(rest_url(EditorApi::NS.'/')),'csrf'=>EditorApi::csrf(),
@@ -60,7 +62,7 @@ class Frontend {
      'lastLogin'=>!empty($identity->last_login_at)?get_date_from_gmt($identity->last_login_at,get_option('date_format').' '.get_option('time_format')):__('Not available','atlas-shipping'),
      'sessionExpiration'=>get_date_from_gmt($identity->expires_at,get_option('date_format').' '.get_option('time_format')),
      'sessionExpirationUnix'=>(int)strtotime($identity->expires_at.' UTC')),
-    'strings'=>$strings);
+    'strings'=>$strings,'editorStrings'=>$editor_strings);
    wp_localize_script('atlas-shipping-app','AtlasShippingApp',$app_config);
   }
   ob_start(); if($identity){include ATLAS_SHIPPING_DIR.'templates/app-shell.php';}else{include ATLAS_SHIPPING_DIR.'templates/login.php';} return ob_get_clean();

@@ -21,3 +21,10 @@ Result: `implemented`; handoff: `Architecture / Review`.
 - Explicit 320px visual and automated assistive-technology audit: not run; responsive CSS and semantic DOM were inspected at the normal browser viewport.
 
 Builder does not claim Architecture acceptance.
+
+## Address Review Corrections
+
+- R1 sends the initial request/stops/items payload together and creates it atomically; server authority recognizes request, stop-location, or item-description input while rejecting default blank shells.
+- R2 supplies all normal editor copy, labels, controls, confirmations, success text, and accessible move labels through the PHP `atlas-shipping` translation configuration.
+- R3 requires the expected aggregate `row_version` for every stop/item create, update, remove, and reorder mutation, touches the request row on success, returns stable conflicts, and carries the returned version forward in the editor.
+- Scoped WordPress validation passed for blank-shell rejection plus stop-first and item-first atomic creation. Live two-tab validation passed for successful child autosave and stale aggregate conflict.

@@ -4,7 +4,7 @@
   "product_build": "0.1.7",
   "product_schema": "0.1.4",
   "artifact": "build/dev/atlas-shipping-0.1.7.zip",
-  "artifact_sha256": "9262eaa022b8d13b2f9b8bbd5182b0ff33036c7061d11d5bd8888f9a4f5db57b",
+  "artifact_sha256": "788a326f618bd643c8b0dd4980a7ca4cc75aedabd35a6bbee37236b74dcb926f",
   "php_lint": "passed-php-8.2.29",
   "javascript_syntax": "passed",
   "static_foundation_regression": "passed",
@@ -19,6 +19,9 @@
   "locked_status_boundary": "passed",
   "submission_snapshot_boundary": "passed",
   "activity_attribution": "passed",
+  "review_r1_first_input_atomicity": "passed-stop-and-item",
+  "review_r2_editor_localization": "passed-php-translation-map",
+  "review_r3_aggregate_concurrency": "passed-successful-child-and-two-tab-stale-conflict",
   "visual_320px_and_automated_a11y": "not-run",
   "non_blocking_environment_warning": "Local PHP CLI reported unavailable optional php_imagick.dll"
 }
