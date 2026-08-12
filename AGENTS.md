@@ -5,14 +5,14 @@
 - Repository: `jumpvin/Atlas-Shipping`
 - Authorized development branch: `bootstrap/atlas-initialization`
 - Repository state: `operational`
-- Current product build: `0.1.6`
+- Current accepted product build: `0.1.6`
 - Current product schema: `0.1.3`
-- Current milestone: `ATLAS-M001`
-- Current milestone status: `implemented`
-- Next owner: `Architecture`
-- Next command: `Review`
+- Current milestone: `ATLAS-M002`
+- Current milestone status: `active`
+- Next owner: `Builder`
+- Next command: `Implement Milestone`
 
-The repository bootstrap milestone `ATLAS-INIT-001` has passed Architecture review. The active product-development milestone is `ATLAS-M001 — Shipping Data Foundation`.
+`ATLAS-M001 — Shipping Data Foundation` passed Architecture review after the canonical review corrections and live WordPress/MySQL validation. `ATLAS-M002 — Shipping Request Editor` is now the active product-development milestone.
 
 ## Role
 
@@ -20,7 +20,7 @@ Implement only the canonical current repository milestone. Architecture owns req
 
 ## Authority
 
-Consumer-repository authority order is: current milestone; Framework and adopted extension locks; product profiles/inventory/roadmap; these instructions; then source/tests. Stop on conflicts.
+Consumer-repository authority order is: current milestone; Framework and adopted extension locks; product current-state/inventory/roadmap; these instructions; then source/tests. Stop on conflicts.
 
 The active Framework authority is Modular Development Framework `0.3.9-dev.18.9`. The adopted WordPress platform authority is WordPress Plugin Suite Profile `0.2.0` at `docs/extensions/wordpress-plugin-suite-profile.lock`.
 
@@ -39,28 +39,27 @@ Before every state-dependent command:
 
 Before planning, prove current milestone ID/status, build, release target, branch, local/remote HEAD, and lock identity. Chat memory and pre-fetch reads are not authority.
 
-## Repository states
-
-Detect `empty`, `bootstrap`, or `operational`. This repository is operational and requires the full operations manifest and validation surface.
-
 ## Commands
 
 - `Initialize Builder`: preflight and identity/readiness report; read-only.
 - `Implement Milestone`: require current status `active`; implement immutable scope; validate/package/report; transition only to `implemented`.
 - `Address Review`: require `review_required`; apply canonical compliance findings only; retain identity; return to `implemented`.
-- `Review`: use cold artifact, invariant, then targeted-evidence passes. A first blocker sets `review_required` but does not normally stop remaining bounded static inspection; aggregate discoverable blockers, stop unrelated expensive execution, and use `blocked/incomplete audit` only when authority or artifact failure makes further inspection impossible.
+- `Review`: use cold artifact, invariant, then targeted-evidence passes; aggregate bounded findings and hand lifecycle control appropriately.
 - `Validate Repository`: execute `repository.operations.json` and emit classified results.
 - `Prepare Chat Handoff` / `Rotate Chat`: verify durable lifecycle/planning state and reject unsafe Builder worktrees before chat rotation.
 - `Create Production Build` / `Create Prod`: package only an exact completed-milestone commit, exclude open work, independently validate, and record provenance.
-- Packaging/release/update/adoption/reconciliation: always preflight, then follow explicit repository authority.
-- `Update Framework`: use the supplied Framework and extension ZIP/SHA identities, derive managed changes from the synchronized local checkout, preserve product-owned work, validate within the update, publish one commit, and verify remote equality and a clean tree.
+- `Update Framework`: follow explicit Framework update authority and preserve product-owned work.
+
+## Runtime Validation
+
+A local WordPress test site/runtime is available to Builder and was successfully used during ATLAS-M001 review corrections. Use it for ATLAS-M002 runtime validation where available. Record only tests actually executed; do not fabricate browser/runtime evidence.
 
 ## Git and safety
 
-Use the authorized release/milestone/hotfix branch. Do not create, switch, merge, rebase, force-push, delete, stash, or discard work without explicit authority. Commit/push only when the command and milestone authorize them. Preserve unrelated changes and report every omission or failure.
+Use only the authorized branch. Do not create/switch branches, merge, rebase, force-push, delete, stash, or discard work without explicit authority. Commit/push only when the active milestone authorizes it. Preserve unrelated changes and report omissions/failures.
 
-For `ATLAS-M001`, the milestone explicitly authorizes commits and pushes to `bootstrap/atlas-initialization` only. It does not authorize merging to `master`.
+For `ATLAS-M002`, commits and pushes are authorized only to `bootstrap/atlas-initialization`. Merging to `master` is not authorized.
 
 ## Completion
 
-Report identity/status, synchronization evidence, changed paths/reasons, checks with result/gate classifications, reports/artifacts, risks, Git identities, and final tree state. Builder never claims architectural acceptance.
+Report identity/status, synchronization evidence, changed paths/reasons, checks with result/gate classifications, reports/artifacts, risks, Git identities, and final tree state. Builder never claims Architecture acceptance and must not begin the next milestone.
