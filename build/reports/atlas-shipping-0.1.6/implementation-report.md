@@ -18,6 +18,19 @@ Result: `implemented`; handoff: `Architecture / Review`.
 - WordPress-installable package boundary and version/schema identity: PASS.
 - Historical migrations `001`–`004`: unchanged.
 - Authentication, sessions, identities, frontend assets/templates/router, and shortcode integration: unchanged.
-- PHP interpreter lint and live WordPress/database checks: NOT RUN because neither PHP nor a WordPress/database runtime is available. Runtime-only checks are enumerated in `validation.json` for Architecture review.
+- PHP 8.2.29 lint for all plugin files and the runtime harness: PASS.
+- WordPress 7.0.4 / MySQL 8.4 install, activation, fresh migration, diagnostics, and migration rerun: PASS.
+- R1–R5 runtime harness: PASS, including orphan rejection, actor validation, canonical/reversed datetime checks, simulated first snapshot-insert collision with bounded retry, activity attribution, and archived-parent mutation rejection.
+- Portable ZIP entry validation: PASS; WordPress installed the artifact successfully.
+
+## Address Review Corrections
+
+- R1 validates active parent aggregates for every stop/item mutation.
+- R2 stores only canonical UTC datetimes and rejects invalid or reversed windows.
+- R3 allocates snapshot numbers under `FOR UPDATE` with bounded retry and the existing unique constraint.
+- R4 validates ATLAS identities at every mutation entry point.
+- R5 includes `actor_identity_id` in every shipping mutation activity record.
+- Activation now validates the stored application shortcode without requiring it to be registered earlier in the activation request.
+- Windows packaging now writes portable forward-slash ZIP entries.
 
 Builder does not claim Architecture acceptance.

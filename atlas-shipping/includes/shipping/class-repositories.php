@@ -23,5 +23,6 @@ final class ItemRepository extends OrderedRepository {public function __construc
 final class SnapshotRepository extends Repository {
  public function __construct($wpdb=null){parent::__construct($wpdb);$this->table=$this->wpdb->prefix.'atlas_shipping_snapshots';}
  public function for_request($request){$rows=$this->wpdb->get_results($this->wpdb->prepare('SELECT * FROM '.$this->table.' WHERE request_id=%d ORDER BY snapshot_no ASC',absint($request)));return array_map(fn($r)=>new Snapshot($r),$rows);}
+ public function next_number_for_update($request){return 1+(int)$this->wpdb->get_var($this->wpdb->prepare('SELECT COALESCE(MAX(snapshot_no),0) FROM '.$this->table.' WHERE request_id=%d FOR UPDATE',absint($request)));}
  public function create($data){$data['created_at']=$this->now();$ok=$this->wpdb->insert($this->table,$data);if(false===$ok)return new \WP_Error('atlas_snapshot_create_failed',__('The immutable snapshot could not be stored.','atlas-shipping'));$row=$this->wpdb->get_row($this->wpdb->prepare('SELECT * FROM '.$this->table.' WHERE id=%d',$this->wpdb->insert_id));return new Snapshot($row);}
 }

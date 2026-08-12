@@ -19,10 +19,14 @@ if($repos-notmatch'archived_at IS NULL'){$fail.Add('soft-delete-filter-missing')
 $service=Get-Content -Raw (Join-Path $RepositoryRoot 'atlas-shipping/includes/shipping/class-service.php')
 if($service-notmatch'content_hash'){$fail.Add('snapshot-hash-missing')}
 foreach($contract in @('START TRANSACTION','ROLLBACK','request_created','request_updated','request_archived','stop_created','item_created','snapshot_created','WP_Error')){if($service-notmatch[regex]::Escape($contract)){$fail.Add("service-contract-missing:$contract")}}
+foreach($reviewContract in @('atlas_request_parent_invalid','atlas_actor_identity_invalid','atlas_stop_datetime_invalid','atlas_stop_window_reversed','actor_identity_id','next_number_for_update')){if($service-notmatch[regex]::Escape($reviewContract)){$fail.Add("review-contract-missing:$reviewContract")}}
+if($service-notmatch'for\(\$attempt=0;\$attempt<3;\$attempt\+\+\)'){$fail.Add('snapshot-bounded-retry-missing')}
+if($repos-notmatch'FOR UPDATE'){$fail.Add('snapshot-allocation-lock-missing')}
 $changed=git -c safe.directory='C:/Users/govin/WebstormProjects/Atlas-Shipping/.builder-worktree' -C $RepositoryRoot diff --name-only 23ad4f5799a2e1826987c59b029991b8d58313a8 -- 'atlas-shipping/includes/migrations/001-initial-foundation.php' 'atlas-shipping/includes/migrations/002-identities.php' 'atlas-shipping/includes/migrations/003-magic-tokens.php' 'atlas-shipping/includes/migrations/004-sessions.php'
 if($changed){$fail.Add('historical-migration-modified')}
 $ui=git -c safe.directory='C:/Users/govin/WebstormProjects/Atlas-Shipping/.builder-worktree' -C $RepositoryRoot diff --name-only 23ad4f5799a2e1826987c59b029991b8d58313a8 -- 'atlas-shipping/assets' 'atlas-shipping/templates' 'atlas-shipping/includes/class-frontend.php'
 if($ui){$fail.Add('prohibited-ui-change')}
+Need 'atlas-shipping/includes/class-activator.php' 'strpos\( \$page->post_content, ''\[atlas_shipping_app' 'activation-shortcode-validation-invalid'
 $result=[ordered]@{schema_version=1;result=$(if($fail.Count){'failed'}else{'passed'});checks='static-isolated';runtime_database='not-run';failures=@($fail)}
 $result|ConvertTo-Json -Depth 8
 if($fail.Count-and-not$NoExitFailure){exit 1}

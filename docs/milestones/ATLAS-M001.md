@@ -1,6 +1,6 @@
 # ATLAS-M001 — Shipping Data Foundation
 
-Status: review_required
+Status: implemented
 
 Product: ATLAS Shipping Management
 
@@ -14,9 +14,9 @@ Release line: `0.1.x`
 
 Authorized branch: `bootstrap/atlas-initialization`
 
-Next owner: Builder
+Next owner: Architecture
 
-Next command: Address Review
+Next command: Review
 
 ## Objective
 

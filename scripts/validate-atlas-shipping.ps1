@@ -20,6 +20,7 @@ else {
   Add-Type -AssemblyName System.IO.Compression.FileSystem
   $zip = [IO.Compression.ZipFile]::OpenRead($zipPath)
   try {
+    if (@($zip.Entries | Where-Object { $_.FullName.Contains('\') }).Count) { $failures.Add('package-entry-backslash-invalid') }
     $files = @($zip.Entries | Where-Object { -not $_.FullName.EndsWith('/') } | ForEach-Object { $_.FullName.Replace('\','/') })
     $roots = @($files | ForEach-Object { ($_ -split '/')[0] } | Select-Object -Unique)
     if ($roots.Count -ne 1 -or $roots[0] -ne 'atlas-shipping') { $failures.Add('package-top-level-invalid') }

@@ -112,6 +112,8 @@ class Activator {
         return $page instanceof \WP_Post
             && 'page' === $page->post_type
             && 'trash' !== $page->post_status
-            && has_shortcode( $page->post_content, 'atlas_shipping_app' );
+            // Activation may run after plugins_loaded, before Frontend has had
+            // an opportunity to register the shortcode in this request.
+            && false !== strpos( $page->post_content, '[atlas_shipping_app' );
     }
 }
