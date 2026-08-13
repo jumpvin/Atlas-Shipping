@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ATLAS Shipping Management
  * Description: Private frontend shipping-management application foundation.
- * Version: 0.1.8
+ * Version: 0.1.9
  * Requires at least: 6.4
  * Requires PHP: 8.0
  * Author: ATLAS
@@ -10,10 +10,10 @@
  * Domain Path: /languages
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'ATLAS_SHIPPING_VERSION', '0.1.8' );
+define( 'ATLAS_SHIPPING_VERSION', '0.1.9' );
 define( 'ATLAS_SHIPPING_SCHEMA_VERSION', '0.1.4' );
 define( 'ATLAS_SHIPPING_BUILD_DATE', '2026-08-12' );
-define( 'ATLAS_SHIPPING_BUILD_ID', 'atlas-m003' );
+define( 'ATLAS_SHIPPING_BUILD_ID', 'atlas-m004' );
 define( 'ATLAS_SHIPPING_BUILD_FINGERPRINT', ATLAS_SHIPPING_VERSION . '-' . str_replace( '-', '', ATLAS_SHIPPING_BUILD_DATE ) . '-' . ATLAS_SHIPPING_BUILD_ID );
 define( 'ATLAS_SHIPPING_FILE', __FILE__ );
 define( 'ATLAS_SHIPPING_DIR', plugin_dir_path( __FILE__ ) );

@@ -3,16 +3,16 @@ Contributors: atlas
 Tags: shipping, operations, passwordless
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.1.8
+Stable tag: 0.1.9
 License: GPLv2 or later
 
 Private frontend request-management application for ATLAS Shipping.
 
 == Description ==
-Version 0.1.8 adds a full-width application experience plus authenticated request lists, filters, pagination, and read-only request detail.
+Version 0.1.9 stabilizes date-only validation, field-specific feedback, and uninterrupted single-flight autosave while preserving the accepted request-management experience.
 
 == Installation ==
-Upload atlas-shipping-0.1.8.zip through Plugins > Add Plugin > Upload Plugin and activate it. Existing identities, sessions, migrations, and application-page configuration remain compatible.
+Upload atlas-shipping-0.1.9.zip through Plugins > Add Plugin > Upload Plugin and activate it. Existing identities, sessions, migrations, and application-page configuration remain compatible.
 
 == Shortcode ==
 [atlas_shipping_app]

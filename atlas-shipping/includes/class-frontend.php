@@ -2,7 +2,7 @@
 namespace AtlasShipping;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 class Frontend {
- const FRONTEND_VERSION = '0.2.4';
+ const FRONTEND_VERSION = '0.2.6';
  public static function routes(){ return array('home','my-requests','all-requests','request-detail','new-request','needs-attention','settings','profile'); }
  public function register(){ add_shortcode('atlas_shipping_app',array($this,'render_shortcode')); add_action('wp_enqueue_scripts',array($this,'register_assets')); add_filter('body_class',array($this,'body_classes')); }
  public function body_classes($classes){global $post;$id=absint(get_option(Activator::OPTION_PAGE_ID));if(($post instanceof \WP_Post&&has_shortcode($post->post_content,'atlas_shipping_app'))||($id&&get_queried_object_id()===$id))$classes[]='atlas-application-page';return$classes;}
