@@ -2,6 +2,8 @@
 
 Review result: `review_required`
 
+Builder response: `addressed`
+
 Reviewed implementation commit: `905a41a03c62551fce2b087598651adbbd80957d`
 
 Product target remains: `0.2.0`
@@ -148,3 +150,12 @@ Use the available WordPress/MySQL/browser runtime and verify:
 - schema remains `0.2.0`
 
 At completion return lifecycle control to Architecture with status `implemented` and next command `Review`.
+
+## Builder response
+
+- R1 addressed: coordinator workspace now renders the complete accepted request-detail field sets for request context, ordered stops, items, contacts, windows, handling, PM preferences, and loading decisions.
+- R2 addressed: Preview Outbound Handoff opens a labeled keyboard-operable in-application dialog built from current form values; Back to Edit returns focus and does not send; the irreversible action exists only inside confirmation.
+- R3 addressed: normal coordinator UI and accessibility strings now flow through the localized PHP configuration; defensive JavaScript fallbacks remain.
+- R4 addressed: post-send Request Detail includes final/other equipment, coordinator load/unload decisions, notes, sent timestamp, and an understandable immutable-snapshot indication without raw internals.
+- Product/schema remain `0.2.0`; migration `007` and the accepted atomic backend are unchanged.
+- Lifecycle returned to Architecture / Review. Architecture acceptance is not claimed.

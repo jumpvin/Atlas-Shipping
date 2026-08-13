@@ -19,3 +19,11 @@ Result: `implemented`; handoff: `Architecture / Review`.
 - PHP/JavaScript syntax, package boundary, shipping regressions, Framework/workflow validation: PASS.
 
 Builder does not claim Architecture acceptance.
+
+## Architecture Review 1 Response
+
+- Complete operational request, stop, item, handling, and PM preference data now appears in the handoff workspace.
+- Current coordinator form values drive a deliberate dialog preview; Back restores focus without mutation and Send is available only from confirmation.
+- Coordinator copy uses the localized PHP configuration surface.
+- Post-send detail exposes the complete safe outbound decision and immutable-record indication.
+- Browser validation used submitted request `AS-000011` without sending it: complete field matrices passed, current-value preview passed, request representation passed, focus entry/return passed, and cancel left the request unsent.
