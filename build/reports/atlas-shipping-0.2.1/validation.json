@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "milestone": "ATLAS-M006",
+  "product_build": "0.2.1",
+  "product_schema": "0.2.1",
+  "result": "passed",
+  "checks": ["php_lint", "javascript_syntax", "migration_008_upgrade_and_rerun", "coordinator_handoff_regression", "response_workspace", "partial_save_without_transition", "distinct_pm_handoff_actual_data", "actual_details_persistence", "zero_freight_cost_distinct_from_unknown", "scheduled_transition_and_timestamp", "needs_attention_removal", "three_stage_request_detail", "package_boundary", "framework_and_shipping_foundation_regression"]
+}

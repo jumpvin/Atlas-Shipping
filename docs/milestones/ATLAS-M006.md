@@ -1,6 +1,6 @@
 # ATLAS-M006 — Shipper Response & Shipment Details
 
-Status: active
+Status: implemented
 
 Product: ATLAS Shipping Management
 
@@ -14,9 +14,9 @@ Release line: `0.2.x`
 
 Authorized branch: `bootstrap/atlas-initialization`
 
-Next owner: Builder
+Next owner: Architecture
 
-Next command: Implement Milestone
+Next command: Review
 
 ## Objective
 

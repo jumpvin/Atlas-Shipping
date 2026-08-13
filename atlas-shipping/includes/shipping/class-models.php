@@ -10,8 +10,9 @@ abstract class Model {
 }
 final class Request extends Model {
  const STATUSES = array( 'draft','submitted','sent_to_shipper','options_received','scheduled','in_transit','carrier_reported_delivered','delivery_issue','delivery_verified','complete','cancelled' );
- public $stops = array(); public $items = array(); public $snapshots = array();
+ public $stops = array(); public $items = array(); public $snapshots = array(); public $handoff = array(); public $actual_details = array();
 }
 final class Stop extends Model { const TYPES = array( 'pickup','delivery','intermediate' ); }
 final class Item extends Model {}
 final class Snapshot extends Model {}
+final class ShipperResponse extends Model {}

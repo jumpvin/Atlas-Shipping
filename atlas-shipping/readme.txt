@@ -3,16 +3,16 @@ Contributors: atlas
 Tags: shipping, operations, passwordless
 Requires at least: 6.4
 Requires PHP: 8.0
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 
 Private frontend request-management application for ATLAS Shipping.
 
 == Description ==
-Version 0.2.0 adds the authorized coordinator queue, deliberate shipper handoff, immutable outbound snapshot, and post-handoff PM edit lock.
+Version 0.2.1 adds coordinator shipper-response drafts, actual shipment details, freight cost, and atomic scheduling while preserving the immutable outbound handoff.
 
 == Installation ==
-Upload atlas-shipping-0.2.0.zip through Plugins > Add Plugin > Upload Plugin and activate it. Existing identities, sessions, migrations, and application-page configuration remain compatible.
+Upload atlas-shipping-0.2.1.zip through Plugins > Add Plugin > Upload Plugin and activate it. Existing identities, sessions, migrations, and application-page configuration remain compatible.
 
 == Shortcode ==
 [atlas_shipping_app]

@@ -49,6 +49,10 @@ class Migrator {
                 'id' => '007_coordinator_handoffs', 'version' => '0.2.0',
                 'file' => ATLAS_SHIPPING_DIR . 'includes/migrations/007-coordinator-handoffs.php',
             ),
+            array(
+                'id' => '008_shipper_responses', 'version' => '0.2.1',
+                'file' => ATLAS_SHIPPING_DIR . 'includes/migrations/008-shipper-responses.php',
+            ),
         );
     }
 
@@ -200,7 +204,8 @@ class Migrator {
             && $this->table_exists( $wpdb->prefix . 'atlas_shipping_stops' )
             && $this->table_exists( $wpdb->prefix . 'atlas_shipping_items' )
             && $this->table_exists( $wpdb->prefix . 'atlas_shipping_snapshots' )
-            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_handoffs' );
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_handoffs' )
+            && $this->table_exists( $wpdb->prefix . 'atlas_shipping_shipper_responses' );
     }
 
     public static function log_activity( $type, $summary, $metadata = array(), $object_type = 'plugin', $object_id = null ) {
