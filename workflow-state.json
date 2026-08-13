@@ -4,9 +4,9 @@
   "authorized_branch": "bootstrap/atlas-initialization",
   "framework_identity": "0.3.9-dev.18.9",
   "release_target": "0.2.x",
-  "current_milestone": "ATLAS-M005",
-  "current_status": "completed",
+  "current_milestone": "ATLAS-M006",
+  "current_status": "active",
   "current_build": "0.2.0",
-  "next_owner": "Architecture",
-  "next_command": "Create Milestone"
+  "next_owner": "Builder",
+  "next_command": "Implement Milestone"
 }
