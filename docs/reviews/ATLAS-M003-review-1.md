@@ -10,9 +10,11 @@ Schema target remains: `0.1.4`
 
 ## What passed
 
-The full-width application treatment is successful and correctly scoped to the ATLAS application page. Runtime evidence reports 1390px of application width in a 1422px viewport, no overflow at 900px or 320px, working My Requests / All Requests query runtime, cross-identity read with owner-only edit behavior, unauthenticated API rejection, PHP lint, JavaScript syntax, package boundaries, Framework validation, and unchanged historical migrations.
+The application now claims substantially more horizontal real estate, and the overall target size is appropriate. Runtime evidence reports 1390px of application width in a 1422px viewport, no overflow at 900px or 320px, working My Requests / All Requests query runtime, cross-identity read with owner-only edit behavior, unauthenticated API rejection, PHP lint, JavaScript syntax, package boundaries, Framework validation, and unchanged historical migrations.
 
 The service/repository query boundary, prepared query usage, whitelisted sort expressions, server-backed search/filter/pagination, owner-scoped My Requests behavior, cross-identity All Requests behavior, and continue-edit ownership boundary are acceptable.
+
+Hands-on Architecture testing subsequently identified a positioning defect in the full-width treatment; see R4. The width itself should be preserved while its viewport positioning is corrected.
 
 ## R1 — Complete the required request-list summary
 
@@ -79,13 +81,37 @@ Defensive JavaScript fallback copy is acceptable, but the normal localized execu
 
 While touching the list controls, label the sort control accurately (for example, `Sort by`) rather than using `Last updated` as the field label while the selected sort may be Relevant Date, Created Date, Status, or Owner.
 
+## R4 — Preserve the new application width but correct viewport positioning
+
+Hands-on Architecture testing of the implemented full-width treatment confirms that the new application size is appropriate, but its positioning is not.
+
+The current breakout rule uses a centered-width calculation combined with `margin-left: 50%` and `transform: translateX(-50%)` from an element that is itself inside the theme's narrow content column. In the tested Twenty Twenty-Five page, this causes the expanded ATLAS application to extend far off the left side of the viewport. The screenshot shows the left sidebar and approximately half of many form controls clipped outside the visible page while a large unused white area remains on the right.
+
+This is a blocking usability defect even though the measured element width is correct.
+
+Correct the dedicated ATLAS application-page layout so:
+
+- the application remains approximately the same useful desktop width achieved in `0.1.8`
+- the complete application is positioned within the viewport with sensible left and right gutters
+- the sidebar is fully visible
+- the main content is fully visible
+- no application content is clipped beyond the left viewport edge
+- no large accidental unused right-side region is created by an incorrect breakout origin
+- the solution remains scoped to the ATLAS application page
+- unrelated WordPress pages remain unaffected
+- tablet/mobile behavior remains usable
+
+Do not solve this by shrinking ATLAS back into the theme content column. Width is accepted; positioning is what must change.
+
+Prefer a robust viewport-relative/full-bleed technique that accounts for the fact that the shortcode root may begin inside a centered theme content container. Do not assume the shortcode element's own 50% point is the viewport center.
+
 ## Review-scope rules
 
-Address only R1–R3 plus directly necessary styles, localization/config additions, runtime validation, and report updates.
+Address only R1–R4 plus directly necessary styles, localization/config additions, runtime validation, and report updates.
 
 Preserve:
 
-- full-width scoped application behavior
+- the accepted wider application size while correcting its position
 - 320px/tablet responsive behavior
 - accepted New Request editor
 - My Requests owner scoping
@@ -103,7 +129,12 @@ Do not implement coordinator workflow, shipper handoff, Needs Attention, deliver
 
 Use the available WordPress/MySQL/browser runtime where possible and verify:
 
-- desktop full-width behavior remains intact
+- desktop application remains approximately the accepted wide size
+- desktop ATLAS shell is wholly visible within the viewport with balanced/sensible gutters
+- sidebar and main content are not clipped on the left or right
+- no large accidental blank region results from breakout positioning
+- the Twenty Twenty-Five test page or equivalent narrow theme container correctly centers/positions the viewport-wide application
+- unrelated WordPress pages remain unaffected
 - 900px and approximately 320px layouts remain free of primary horizontal overflow
 - list rows show Project ID and Project/Job Site Name independently when both exist
 - list rows show Requested Ship Date and Required Delivery Date when both exist
