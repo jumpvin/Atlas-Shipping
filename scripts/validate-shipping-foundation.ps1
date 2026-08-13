@@ -6,8 +6,8 @@ $RepositoryRoot = (Resolve-Path $RepositoryRoot).Path
 $fail = [Collections.Generic.List[string]]::new()
 function Need([string]$Path,[string]$Pattern,[string]$Code) { $text=Get-Content -Raw (Join-Path $RepositoryRoot $Path); if($text-notmatch$Pattern){$fail.Add($Code)} }
 foreach($path in @('atlas-shipping/includes/migrations/005-shipping-domain.php','atlas-shipping/includes/shipping/class-models.php','atlas-shipping/includes/shipping/class-repositories.php','atlas-shipping/includes/shipping/class-service.php')){if(-not(Test-Path(Join-Path $RepositoryRoot $path))){$fail.Add("missing:$path")}}
-Need 'atlas-shipping/atlas-shipping.php' "ATLAS_SHIPPING_VERSION', '0\.1\.9'" 'version-mismatch'
-Need 'atlas-shipping/atlas-shipping.php' "ATLAS_SHIPPING_SCHEMA_VERSION', '0\.1\.4'" 'schema-mismatch'
+Need 'atlas-shipping/atlas-shipping.php' "ATLAS_SHIPPING_VERSION', '0\.2\.0'" 'version-mismatch'
+Need 'atlas-shipping/atlas-shipping.php' "ATLAS_SHIPPING_SCHEMA_VERSION', '0\.2\.0'" 'schema-mismatch'
 Need 'atlas-shipping/includes/class-migrator.php' '005_shipping_domain' 'migration-unregistered'
 $migration=Get-Content -Raw (Join-Path $RepositoryRoot 'atlas-shipping/includes/migrations/005-shipping-domain.php')
 foreach($table in @('requests','stops','items','snapshots')){if($migration-notmatch"atlas_shipping_$table"){$fail.Add("table-missing:$table")}}

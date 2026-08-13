@@ -5,8 +5,8 @@
   "framework_identity": "0.3.9-dev.18.9",
   "release_target": "0.2.x",
   "current_milestone": "ATLAS-M005",
-  "current_status": "active",
-  "current_build": "0.1.9",
-  "next_owner": "Builder",
-  "next_command": "Implement Milestone"
+  "current_status": "implemented",
+  "current_build": "0.2.0",
+  "next_owner": "Architecture",
+  "next_command": "Review"
 }

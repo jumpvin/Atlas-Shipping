@@ -29,3 +29,9 @@ final class SnapshotRepository extends Repository {
  public function next_number_for_update($request){return 1+(int)$this->wpdb->get_var($this->wpdb->prepare('SELECT COALESCE(MAX(snapshot_no),0) FROM '.$this->table.' WHERE request_id=%d FOR UPDATE',absint($request)));}
  public function create($data){$data['created_at']=$this->now();$ok=$this->wpdb->insert($this->table,$data);if(false===$ok)return new \WP_Error('atlas_snapshot_create_failed',__('The immutable snapshot could not be stored.','atlas-shipping'));$row=$this->wpdb->get_row($this->wpdb->prepare('SELECT * FROM '.$this->table.' WHERE id=%d',$this->wpdb->insert_id));return new Snapshot($row);}
 }
+final class HandoffRepository extends Repository {
+ public function __construct($wpdb=null){parent::__construct($wpdb);$this->table=$this->wpdb->prefix.'atlas_shipping_handoffs';}
+ public function find_for_request($request){return$this->wpdb->get_row($this->wpdb->prepare('SELECT * FROM '.$this->table.' WHERE request_id=%d',absint($request)),ARRAY_A);}
+ public function save($request,$actor,$data){$now=$this->now();$row=array('request_id'=>absint($request),'coordinator_identity_id'=>absint($actor),'final_equipment'=>sanitize_key($data['final_equipment']??''),'other_equipment'=>sanitize_text_field($data['other_equipment']??''),'coordinator_notes'=>sanitize_textarea_field($data['coordinator_notes']??''),'load_pickup'=>empty($data['load_pickup'])?0:1,'unload_delivery'=>empty($data['unload_delivery'])?0:1,'updated_at'=>$now);$existing=$this->find_for_request($request);if($existing)return false!==$this->wpdb->update($this->table,$row,array('request_id'=>absint($request)));$row['created_at']=$now;return false!==$this->wpdb->insert($this->table,$row);}
+ public function mark_sent($request,$snapshot){return false!==$this->wpdb->update($this->table,array('snapshot_id'=>absint($snapshot),'sent_at'=>$this->now(),'updated_at'=>$this->now()),array('request_id'=>absint($request)));}
+}

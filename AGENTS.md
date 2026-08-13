@@ -5,14 +5,14 @@
 - Repository: `jumpvin/Atlas-Shipping`
 - Authorized development branch: `bootstrap/atlas-initialization`
 - Repository state: `operational`
-- Current accepted product build: `0.1.9`
-- Current product schema: `0.1.4`
-- Current milestone: `ATLAS-M004`
-- Current milestone status: `completed`
+- Current implemented product build: `0.2.0`
+- Current product schema: `0.2.0`
+- Current milestone: `ATLAS-M005`
+- Current milestone status: `implemented`
 - Next owner: `Architecture`
-- Next command: `Create Milestone`
+- Next command: `Review`
 
-`ATLAS-M001` through `ATLAS-M004` have passed Architecture review. The next product-development milestone has not yet been created.
+`ATLAS-M001` through `ATLAS-M004` have passed Architecture review. `ATLAS-M005 — Shipping Coordinator Handoff` is implemented and awaiting Architecture review.
 
 ## Role
 

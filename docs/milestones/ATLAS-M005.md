@@ -1,6 +1,6 @@
 # ATLAS-M005 — Shipping Coordinator Handoff
 
-Status: active
+Status: implemented
 
 Product: ATLAS Shipping Management
 
@@ -12,9 +12,9 @@ Current accepted schema version: `0.1.4`
 
 Authorized branch: `bootstrap/atlas-initialization`
 
-Next owner: Builder
+Next owner: Architecture
 
-Next command: Implement Milestone
+Next command: Review
 
 ## Objective
 

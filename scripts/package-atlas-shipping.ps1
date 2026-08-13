@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 if (-not $RepositoryRoot) { $RepositoryRoot = Split-Path -Parent $PSScriptRoot }
 $RepositoryRoot = (Resolve-Path $RepositoryRoot).Path
 $source = Join-Path $RepositoryRoot 'atlas-shipping'
-$destination = Join-Path $RepositoryRoot 'build/dev/atlas-shipping-0.1.9.zip'
+$destination = Join-Path $RepositoryRoot 'build/dev/atlas-shipping-0.2.0.zip'
 if (-not (Test-Path (Join-Path $source 'atlas-shipping.php'))) { throw 'Plugin entry file missing.' }
 New-Item -ItemType Directory -Force (Split-Path -Parent $destination) | Out-Null
 Add-Type -AssemblyName System.IO.Compression

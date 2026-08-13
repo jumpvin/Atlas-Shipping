@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "result": "passed",
+  "product_build": "0.2.0",
+  "product_schema": "0.2.0",
+  "artifact": "build/dev/atlas-shipping-0.2.0.zip",
+  "artifact_sha256": "2139608fbac3e7913e37ead0ba36a66d43cf37471557407393892ef8f60fd228",
+  "migration_upgrade_idempotency": "passed-runtime",
+  "coordinator_roles_and_pm_denial": "passed-runtime",
+  "submitted_queue_and_workspace": "passed-runtime-and-browser",
+  "atomic_send_snapshot_status_lock": "passed-runtime",
+  "duplicate_and_stale_boundary": "passed-runtime",
+  "unauthenticated_api": "passed-http-401",
+  "php_lint": "passed",
+  "javascript_syntax": "passed",
+  "package_boundary": "passed",
+  "framework_validation": "passed",
+  "historical_migrations_001_006": "unchanged"
+}
