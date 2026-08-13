@@ -1,13 +1,13 @@
 # ATLAS Shipping Management — Current State
 
-- Current implemented build: `0.1.7`
+- Current implemented build: `0.1.8`
 - Current schema: `0.1.4`
 - Release line: `0.1.x`
-- Accepted functionality: through Shipping Data Foundation (`ATLAS-M001`)
-- Current repository milestone: `ATLAS-M002 — Shipping Request Editor` (`implemented`)
+- Accepted functionality: through Shipping Request Editor (`ATLAS-M002`)
+- Current milestone: `ATLAS-M003 — Request Management & Full-Width Application Experience` (`implemented`)
 - Next owner: Architecture
 - Next command: `Review`
 
-Build `0.1.7` adds the isolated New Request single-page editor, session-authenticated and CSRF-protected REST boundary, meaningful autosave and latest-draft resume, ordered stop/item editing, request transportation preferences through migration `006`, optimistic concurrency, structured submission validation, and deliberate transition through `submitted`.
+Build `0.1.8` adds a shortcode-scoped full-width application, responsive request-management workspaces, server-backed My Requests and All Requests queries, temporal/status/owner/search/sort filters, pagination, and read-only aggregate detail with owner-only continue-edit routing.
 
-The accepted `0.1.6` authentication, shell, diagnostics, migrations `001`–`005`, shipping repositories/services/snapshots, Framework authority, and WordPress profile lock remain preserved. Shipping Coordinator, shipper handoff/snapshot, lists, notification, scheduling, freight-cost, delivery-verification, attachments, and Excel workflows remain unimplemented.
+Authentication, editor behavior, aggregate concurrency, schema `0.1.4`, migrations `001`–`006`, snapshots, Framework authority, and the WordPress profile lock remain preserved. Later coordinator, shipper handoff, notification, delivery, and Excel workflows remain unimplemented.
