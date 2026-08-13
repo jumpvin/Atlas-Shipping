@@ -2,22 +2,22 @@
 namespace AtlasShipping;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 class Frontend {
- const FRONTEND_VERSION = '0.2.0';
+ const FRONTEND_VERSION = '0.2.4';
  public static function routes(){ return array('home','my-requests','all-requests','request-detail','new-request','needs-attention','settings','profile'); }
  public function register(){ add_shortcode('atlas_shipping_app',array($this,'render_shortcode')); add_action('wp_enqueue_scripts',array($this,'register_assets')); add_filter('body_class',array($this,'body_classes')); }
  public function body_classes($classes){global $post;$id=absint(get_option(Activator::OPTION_PAGE_ID));if(($post instanceof \WP_Post&&has_shortcode($post->post_content,'atlas_shipping_app'))||($id&&get_queried_object_id()===$id))$classes[]='atlas-application-page';return$classes;}
  public function register_assets(){
-  wp_register_style('atlas-shipping-layout',ATLAS_SHIPPING_URL.'assets/css/layout.css',array(),ATLAS_SHIPPING_VERSION);
-  wp_register_style('atlas-shipping-pages',ATLAS_SHIPPING_URL.'assets/css/pages.css',array('atlas-shipping-layout'),ATLAS_SHIPPING_VERSION);
-  wp_register_style('atlas-shipping-app',ATLAS_SHIPPING_URL.'assets/css/app.css',array('atlas-shipping-pages'),ATLAS_SHIPPING_VERSION);
-  wp_register_style('atlas-shipping-editor',ATLAS_SHIPPING_URL.'assets/css/new-request.css',array('atlas-shipping-app'),ATLAS_SHIPPING_VERSION);
-  wp_register_style('atlas-shipping-management',ATLAS_SHIPPING_URL.'assets/css/request-management.css',array('atlas-shipping-editor'),ATLAS_SHIPPING_VERSION);
-  wp_register_script('atlas-shipping-router',ATLAS_SHIPPING_URL.'assets/js/router.js',array(),ATLAS_SHIPPING_VERSION,true);
-  wp_register_script('atlas-shipping-navigation',ATLAS_SHIPPING_URL.'assets/js/navigation.js',array('atlas-shipping-router'),ATLAS_SHIPPING_VERSION,true);
-  wp_register_script('atlas-shipping-pages',ATLAS_SHIPPING_URL.'assets/js/pages.js',array('atlas-shipping-router'),ATLAS_SHIPPING_VERSION,true);
-  wp_register_script('atlas-shipping-editor',ATLAS_SHIPPING_URL.'assets/js/new-request.js',array('atlas-shipping-pages'),ATLAS_SHIPPING_VERSION,true);
-  wp_register_script('atlas-shipping-management',ATLAS_SHIPPING_URL.'assets/js/request-management.js',array('atlas-shipping-pages'),ATLAS_SHIPPING_VERSION,true);
-  wp_register_script('atlas-shipping-app',ATLAS_SHIPPING_URL.'assets/js/app.js',array('atlas-shipping-navigation','atlas-shipping-pages','atlas-shipping-editor','atlas-shipping-management'),ATLAS_SHIPPING_VERSION,true);
+  wp_register_style('atlas-shipping-layout',ATLAS_SHIPPING_URL.'assets/css/layout.css',array(),self::FRONTEND_VERSION);
+  wp_register_style('atlas-shipping-pages',ATLAS_SHIPPING_URL.'assets/css/pages.css',array('atlas-shipping-layout'),self::FRONTEND_VERSION);
+  wp_register_style('atlas-shipping-app',ATLAS_SHIPPING_URL.'assets/css/app.css',array('atlas-shipping-pages'),self::FRONTEND_VERSION);
+  wp_register_style('atlas-shipping-editor',ATLAS_SHIPPING_URL.'assets/css/new-request.css',array('atlas-shipping-app'),self::FRONTEND_VERSION);
+  wp_register_style('atlas-shipping-management',ATLAS_SHIPPING_URL.'assets/css/request-management.css',array('atlas-shipping-editor'),self::FRONTEND_VERSION);
+  wp_register_script('atlas-shipping-router',ATLAS_SHIPPING_URL.'assets/js/router.js',array(),self::FRONTEND_VERSION,true);
+  wp_register_script('atlas-shipping-navigation',ATLAS_SHIPPING_URL.'assets/js/navigation.js',array('atlas-shipping-router'),self::FRONTEND_VERSION,true);
+  wp_register_script('atlas-shipping-pages',ATLAS_SHIPPING_URL.'assets/js/pages.js',array('atlas-shipping-router'),self::FRONTEND_VERSION,true);
+  wp_register_script('atlas-shipping-editor',ATLAS_SHIPPING_URL.'assets/js/new-request.js',array('atlas-shipping-pages'),self::FRONTEND_VERSION,true);
+  wp_register_script('atlas-shipping-management',ATLAS_SHIPPING_URL.'assets/js/request-management.js',array('atlas-shipping-pages'),self::FRONTEND_VERSION,true);
+  wp_register_script('atlas-shipping-app',ATLAS_SHIPPING_URL.'assets/js/app.js',array('atlas-shipping-navigation','atlas-shipping-pages','atlas-shipping-editor','atlas-shipping-management'),self::FRONTEND_VERSION,true);
   global $post; $id=absint(get_option(Activator::OPTION_PAGE_ID));
   if((is_page()&&$id&&get_queried_object_id()===$id)||($post instanceof \WP_Post&&has_shortcode($post->post_content,'atlas_shipping_app'))){$this->enqueue_assets();}
  }
@@ -58,7 +58,7 @@ class Frontend {
    );
    $editor_strings=array();
    foreach(array('ATLAS Shipping','New Request','Enter the shipment details below. Your meaningful work saves automatically.','Project / Request Details','Project ID','Internal ID','Client','Project / Job Site Name','Requested Ship Date','Required Delivery Date','Delivery date firmness','General request / project notes','Client requested','Stops','Times are entered in your local timezone and stored canonically.','Pickup','Delivery','Additional stop','Stop type','Site / company','Address line 1','Address line 2','City','State / region','Postal code','Country','Contact name','Contact phone','Contact email','Window start','Window end','Handling responsibility','Equipment notes','Stop instructions','Appointment required','Dock available','Forklift available','Move stop up','Move stop down','Remove','Remove this saved record? This cannot be undone.','Add stop','Shipment Items','Shipment item','Quantity','Description','Length','Width','Height','Dimension unit','Weight','Weight basis','Weight unit','Packaging type','Special handling / notes','Stackable','Fork pockets','Weather sensitive','Move item up','Move item down','Add item','Transportation / Handling Preferences','Preferred vehicle / equipment','Transportation comment','Shipping service loads at pickup','Shipping service unloads at delivery','Third-party loading help may be needed','Third-party unloading help may be needed','Please review:','Request submitted','Your shipping request %s was submitted successfully.')as$text){$editor_strings[$text]=__($text,'atlas-shipping');}
-   foreach(array('Request Management','Upcoming / Active','Past / Completed','Search requests','All statuses','All owners','Relevant date','Created date','Last updated','Status','Owner','Apply filters','Loading requests…','No requests found.','Create a New Request','Previous','Next','View request','Project','Client','Requested ship date','Required delivery date','Pickup','Delivery','Updated','Request Details','Back to requests','Continue editing','Shipment Items','Transportation / Handling Preferences','Notes','Preferred vehicle / equipment','Transportation comment','Shipping service loads at pickup','Shipping service unloads at delivery','Third-party loading help may be needed','Third-party unloading help may be needed','Yes','No','No value supplied','Unknown owner','Page %1$s of %2$s','requests total','Unable to load requests.')as$text){$editor_strings[$text]=__($text,'atlas-shipping');}
+   foreach(array('Request Management','Upcoming / Active','Past / Completed','Search requests','All statuses','All owners','Sort by','Relevant date','Created date','Last updated','Status','Owner','Apply filters','Loading requests…','No requests found.','Create a New Request','Previous','Next','View request','Request list pagination','Project','Client','Requested ship date','Required delivery date','Pickup','Delivery','Updated','Request Details','Back to requests','Continue editing','Stop %s','Full address','Dimensions','Shipment item %s','Shipment Items','Transportation / Handling Preferences','Notes','Preferred vehicle / equipment','Transportation comment','Shipping service loads at pickup','Shipping service unloads at delivery','Third-party loading help may be needed','Third-party unloading help may be needed','Draft','Submitted','Sent To Shipper','Options Received','Scheduled','In Transit','Carrier Reported Delivered','Delivery Issue','Delivery Verified','Complete','Cancelled','Intermediate','No Preference','Yes','No','No value supplied','Unknown owner','Page %1$s of %2$s','requests total','Unable to load requests.')as$text){$editor_strings[$text]=__($text,'atlas-shipping');}
    $app_config=array(
     'version'=>ATLAS_SHIPPING_VERSION,'frontendVersion'=>self::FRONTEND_VERSION,'buildFingerprint'=>ATLAS_SHIPPING_BUILD_FINGERPRINT,
     'defaultRoute'=>'home','routes'=>self::routes(),'loginUrl'=>add_query_arg('atlas_session_expired','1',get_permalink()),'restUrl'=>esc_url_raw(rest_url(EditorApi::NS.'/')),'csrf'=>EditorApi::csrf(),

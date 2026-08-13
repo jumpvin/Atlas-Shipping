@@ -2,6 +2,8 @@
 
 Review result: `review_required`
 
+Builder response: `addressed`
+
 Reviewed implementation commit: `7fad0faf49d8514d0766bc59d7211691f502fb07`
 
 Product target remains: `0.1.8`
@@ -153,3 +155,12 @@ Use the available WordPress/MySQL/browser runtime where possible and verify:
 - schema remains `0.1.4`
 
 At completion return lifecycle control to Architecture with status `implemented` and next command `Review`.
+
+## Builder response
+
+- R1 addressed: list cards now show Project ID and Project / Job Site Name independently, plus both requested and required dates.
+- R2 addressed: read-only detail now renders deterministic, card-based operational stop and item fields while retaining request preferences, notes, and owner-only Continue Editing.
+- R3 addressed: route title, pagination label, sort label, status labels, and new detail labels now use the localized PHP configuration surface.
+- R4 addressed: the shell uses a measured viewport offset rather than a theme-container center assumption; desktop, 900px, and 320px checks show complete visibility and no document overflow.
+- Product remains `0.1.8`; schema remains `0.1.4`; migrations `001`–`006` are unchanged.
+- Lifecycle returned to Architecture / Review. Architecture acceptance is not claimed.

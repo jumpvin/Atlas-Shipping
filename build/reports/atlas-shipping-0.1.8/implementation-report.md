@@ -19,3 +19,11 @@ Result: `implemented`; handoff: `Architecture / Review`.
 - PHP/JavaScript, package, Framework, workflow, and historical-migration gates: PASS.
 
 Builder does not claim Architecture acceptance.
+
+## Architecture Review 1 Response
+
+- R1: list summaries independently render project ID, project/job-site name, requested ship date, and required delivery date.
+- R2: read-only detail renders full operational stop and shipment-item data in deterministic card order.
+- R3: route, control, pagination, status, and accessibility copy is supplied through the localized PHP configuration.
+- R4: measured viewport positioning preserves the accepted width with balanced gutters and no desktop, tablet, or 320px overflow.
+- Live Twenty Twenty-Five measurements: desktop app `1390.4px`, left `16px`, right `1406.4px`, document `1407px`; tablet app `868px` in `885px` client width; mobile app/document `305px` in `305px` client width.
