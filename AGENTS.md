@@ -5,14 +5,14 @@
 - Repository: `jumpvin/Atlas-Shipping`
 - Authorized development branch: `bootstrap/atlas-initialization`
 - Repository state: `operational`
-- Current implemented product build: `0.1.9`
+- Current accepted product build: `0.1.9`
 - Current product schema: `0.1.4`
 - Current milestone: `ATLAS-M004`
-- Current milestone status: `implemented`
+- Current milestone status: `completed`
 - Next owner: `Architecture`
-- Next command: `Review`
+- Next command: `Create Milestone`
 
-`ATLAS-M001` through `ATLAS-M003` have passed Architecture review. `ATLAS-M004 — Request Editor Interaction Stabilization` is implemented and awaiting Architecture review.
+`ATLAS-M001` through `ATLAS-M004` have passed Architecture review. The next product-development milestone has not yet been created.
 
 ## Role
 
